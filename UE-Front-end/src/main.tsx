@@ -19,7 +19,7 @@ const App = () => {
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <BrowserRouter>
-    <App />
     <Home />
+    <App />
   </BrowserRouter>
 )

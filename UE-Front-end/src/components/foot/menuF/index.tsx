@@ -14,6 +14,13 @@ const MenuF: React.FC<any> = () => {
 
     const handleClick = (param: any) => {
         console.log("测试数据", param)
+        if(param === 'test2') {
+            navigate('/digitalLargeScreen')
+        } else if(param === 'test3') {
+            navigate('/testPageTwo')
+        } else {
+            navigate('/testPageOne')
+        }
 
         callUe4ByMenu({
             key: `test key: ${param}`,

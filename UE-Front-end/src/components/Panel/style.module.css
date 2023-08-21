@@ -1,0 +1,36 @@
+.panel {
+    position: absolute;
+    z-index: 20;
+    height: 100%;
+    width: 16%;
+    top: 8%;
+    background-color: rgba(83, 174, 255, 0.5);
+    box-shadow: 0px 0px 100px 100px rgba(83, 174, 255, 0.5);
+}
+
+.leftAnimation {
+    animation: leftAnimation 2s ease forwards;
+}
+.rightAnimation {
+    animation: rightAnimation 2s ease forwards;
+}
+
+@keyframes leftAnimation {
+    from {
+        left:-25%;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+@keyframes rightAnimation {
+    from {
+        right: -25%;
+    }
+
+    to {
+        right: 0;
+    }
+}
