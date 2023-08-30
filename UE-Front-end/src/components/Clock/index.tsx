@@ -59,17 +59,17 @@ export const Clock = () => {
         {Hour && <span style={{ margin: '0 2px' }}>{':'}</span>}
         <span>{Minutes}</span>
       </span>
-      <span className='secondsclass'>
+      {/* <span className='secondsclass'>
         {Seconds}
-      </span>
-      <div className='dateclass'>
+      </span> */}
+      {/* <div className='dateclass'>
         {Weekday && <p style={{ fontSize: 20, marginBottom: 5, fontWeight: 'bold' }}>
           {`星期${Weekday}`}
         </p>}
         {Month && <p style={{ fontSize: 15, fontWeight: 'bold' }}>
           {`${Year}年${Month}月${Day}日`}
         </p>}
-      </div>
+      </div> */}
     </div>
   )
 }

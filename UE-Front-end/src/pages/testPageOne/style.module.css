@@ -1,0 +1,38 @@
+.slider {
+    position: fixed;
+    bottom: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 5vh;
+    width: 50vw;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+}
+
+.sliderImg {
+    width: 56vw;
+    left: -3.0vw;
+    top: -1vh;
+    position: absolute;
+    z-index: -1;
+}
+
+.show {
+    position: absolute;
+    width: 6vw;
+    height: 5vh;
+    transform: translateX(-46%);
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 0.8em;
+    font-family: PingFangSC;
+}
+
+.arrowImg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}

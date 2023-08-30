@@ -9,5 +9,16 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script type="text/javascript">
+      const setRootFontSize = () => {
+        const screenWidth = window.innerWidth
+        const rootFontSize = screenWidth / 120
+        document.documentElement.style.fontSize = rootFontSize + 'px'
+      }
+
+      window.addEventListener('resize', setRootFontSize)
+
+      window.addEventListener('DOMContentLoaded', setRootFontSize)
+    </script>
   </body>
 </html>

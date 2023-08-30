@@ -9,7 +9,9 @@ const Head: React.FC = () => {
             <div className={style.clock}>
                 <Clock />
             </div>
-            <img src={title} style={{ height: '100%' }}/>
+            <div className={style.title} >城市价值</div>
+            <img src={title} className={style.titleImg} />
+            <div className={style.titleEn} >GROUP OVERVIEW</div>
         </div>
     </>
 }
