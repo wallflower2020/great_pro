@@ -29,3 +29,9 @@
     width: 20vw;
     height: 1vh;
 }
+
+.translate {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

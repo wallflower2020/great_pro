@@ -7,6 +7,7 @@ import sliderArrow from '../../assets/image/sliderArrow.png'
 import border1 from '../../assets/image/border1.png'
 import border4 from '../../assets/image/border4.png'
 import { PreviewTag } from '../../components/PreviewTag'
+import { Translate } from '../../components/Translate'
 
 
 const Testone: React.FC = () => {
@@ -55,7 +56,9 @@ const Testone: React.FC = () => {
                 <img src={slider} className={style.sliderImg} />
                 <div className={style.show} style={{ left: `${value * 9.9}vw`, top: '-6vh' }}>
                     <img src={sliderArrow} className={style.arrowImg} />
-                    <div style={{ marginTop: '0' }}>海龙介绍</div>
+                    <div style={{ marginTop: '0' }}>
+                        <Translate id='hailongIntroduction' />
+                    </div>
                 </div>
                 <div 
                     style={{
