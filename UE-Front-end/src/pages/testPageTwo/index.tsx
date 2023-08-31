@@ -8,12 +8,12 @@ const Testtwo: React.FC = () => {
     return (
         <div>
             <Panel position='left'>
-                <PreviewTag>
+                <PreviewTag id='left1'>
                     <img src={border2} style={{ width: '15vw', marginTop: '10vh' }} />
                 </PreviewTag>
             </Panel>
             <Panel position='right'>
-                <PreviewTag>
+                <PreviewTag id='right1'>
                     <img src={border3} style={{ width: '15vw', marginTop: '10vh' }} />
                 </PreviewTag>
             </Panel>

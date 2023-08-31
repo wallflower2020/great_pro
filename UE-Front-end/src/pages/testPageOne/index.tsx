@@ -38,13 +38,15 @@ const Testone: React.FC = () => {
     return (
         <div>
             <Panel position='left'>
-                <PreviewTag>
-                    <img src={border1} style={{ width: '15vw', marginTop: '10vh' }} />
+                <div style={{ height: '10vh' }}></div>
+                <PreviewTag id='left1'>
+                    <img src={border1} style={{ width: '15vw' }} />
                 </PreviewTag>
             </Panel>
             <Panel position='right'>
-                <PreviewTag>
-                    <img src={border4} style={{ width: '15vw', marginTop: '10vh' }} />
+                <div style={{ height: '10vh' }}></div>
+                <PreviewTag id='right1'>
+                    <img src={border4} style={{ width: '15vw' }} />
                 </PreviewTag>
             </Panel>
             <div className={style.slider}>

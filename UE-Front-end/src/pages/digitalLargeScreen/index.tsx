@@ -6,7 +6,7 @@ import TravelTicket from './travelTicket';
 const DigitalLargeScreen: React.FC = () => {
     return <>
         <Panel position='left'>
-            <PreviewTag>
+            <PreviewTag id='left1'>
                 这是预览组件
                 <TravelTicket />
             </PreviewTag>

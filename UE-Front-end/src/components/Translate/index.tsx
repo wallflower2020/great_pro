@@ -3,6 +3,12 @@ import enUS from '../../locales/en-US'
 import zhCN from '../../locales/zh-CN'
 import zhHK from '../../locales/zh-HK'
 
+/**
+ * 国际化组件示例：
+ * <Translate id="XXX" />
+ * XXX: 参见locales文件夹下对应文本文件对象键值
+ */
+
 interface TranslateInrProps {
     id: string,
 }
