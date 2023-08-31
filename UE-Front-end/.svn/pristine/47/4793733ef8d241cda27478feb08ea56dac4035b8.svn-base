@@ -1,0 +1,36 @@
+.clockclass {
+    /* background-image: linear-gradient(#005fb2,#58a2d9); */
+    background-image: url('../../assets/image/clock.png');
+    border-radius: 16px;
+    transform: scale(0.6);
+    width: 20vw;
+    background-repeat: no-repeat;
+    padding-top: 1vh;
+}
+
+.hourclass {
+    line-height: 264%;
+    font-size: 3em;
+    color: white;
+    font: Arial,sans-serif;
+    /* margin-left: 40px; */
+    margin-left: 10vw;
+}
+
+.secondsclass {
+    font-size: 2em;
+    color: white;
+    margin-left: 6px;
+    font: Arial,sans-serif;
+}
+
+.dateclass {
+    color: white;
+    float: right;
+    margin: 20px 70px 20px 20px;
+}
+
+.lunbo {
+    font-size: 3em;
+    color: white;
+}
