@@ -1,0 +1,41 @@
+.head {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 8%;
+    z-index: 50;
+    /* background-color: rgba(83, 174, 255, 0.5); */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.clock {
+    position: absolute;
+    top: -30px;
+    left: -86px;
+}
+
+.title {
+    margin: 1vh;
+    color: powderblue;
+    text-shadow: 2px 3px 1px pink;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.titleEn {
+    font-size: 0.5em;
+    margin: 1vh;
+}
+
+.titleImg {
+    width: 20vw;
+    height: 1vh;
+}
+
+.translate {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

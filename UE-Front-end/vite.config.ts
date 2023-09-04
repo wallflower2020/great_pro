@@ -10,7 +10,7 @@ import { resolve } from 'path';
 export default defineConfig({
     server: {
         open: true,
-        // host: '10.219.103.78',
+        host: '10.168.1.104',
     },
     optimizeDeps: {
         include: ['moment', 'echarts']
