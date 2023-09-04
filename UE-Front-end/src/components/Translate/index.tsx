@@ -20,9 +20,9 @@ const TranslateInr: React.FC<TranslateInrProps> = (props) => {
     const la = window.localStorage.getItem('lang')
 
     useEffect(() => {
-        if(la === 'zhHK') {
+        if(la === 'LangHK') {
             setLang(zhHK)
-        } else if(la === 'enUS') {
+        } else if(la === 'LangEN') {
             setLang(enUS)
         } else {
             setLang(zhCN)
@@ -31,10 +31,12 @@ const TranslateInr: React.FC<TranslateInrProps> = (props) => {
 
     window.addEventListener('setItem', ()=> {
         const l = sessionStorage.getItem('lang')
-        if(l === 'zhHK') {
+        if(l === 'LangHK') {
             setLang(zhHK)
-        } else if(l === 'enUS') {
+        } else if(l === 'LangEN') {
             setLang(enUS)
+        } else {
+            setLang(zhCN)
         }
     })
 

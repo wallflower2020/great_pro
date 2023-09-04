@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import style from './style.module.css'
 import { useNavigate } from 'react-router';
 import { callUe4ByMenu } from '../../../util/ue'
@@ -22,31 +22,33 @@ const MenuF: React.FC<any> = () => {
     const buttonArr = [
         {
             han: '集团介绍',
-            en: 'GROUP OVERVIEW'
+            en: 'GROUP OVERVIEW',
+            tag: 'A1B1',
         },
         {
             han: '片区介绍',
-            en: 'ARER OVERVIEW'
+            en: 'ARER OVERVIEW',
+            tag: 'A2'
         },
         {
             han: '公司介绍',
-            en: 'CO. OVERVIEW'
+            en: 'CO. OVERVIEW',
+            tag: 'A3'
         },
     ]
 
     const handleClick = (param: any) => {
-        console.log("测试数据", param)
-        if(param === '公司介绍') {
+        console.log("测试数据", param.han)
+        if(param.han === '公司介绍') {
             navigate('/digitalLargeScreen')
-        } else if(param === '片区介绍') {
+        } else if(param.han === '片区介绍') {
             navigate('/testPageTwo')
         } else {
             navigate('/testPageOne')
         }
 
         callUe4ByMenu({
-            key: `test key: ${param}`,
-            cn: `test cn: ${param}`
+            key: param.tag
         })
     }
 
@@ -63,7 +65,7 @@ const MenuF: React.FC<any> = () => {
             {
                 buttonArr.map((item, index) => {
                     return (
-                        <div className={style.button} onClick={() => handleClick(item.han)} key={index}>
+                        <div className={style.button} onClick={() => handleClick(item)} key={item.tag}>
                             <img src={menuB[index]} alt={index.toString()} className={style.menuButton} onMouseOver={changeColor} onMouseOut={changeBack}/>
                             <div className={style.en}>{item.en}</div>
                             <div className={style.han}>{item.han}</div>

@@ -19,6 +19,14 @@ const Head: React.FC = () => {
             <div className={style.translate}>
                 <TransButton />
             </div>
+            {/* <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="611" height="180" viewBox="0 0 611 180">
+                    <g id="矩形_1" data-name="矩形 1" fill="#ff2727" stroke="#707070" stroke-width="1">
+                        <rect width="611" height="180" rx="32" stroke="none" />
+                        <rect x="0.5" y="0.5" width="610" height="179" rx="31.5" fill="none" />
+                    </g>
+                </svg>
+            </div> */}
         </div>
     </>
 }

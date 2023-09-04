@@ -18,6 +18,10 @@
 
 .title {
     margin: 1vh;
+    color: powderblue;
+    text-shadow: 2px 3px 1px pink;
+    font-weight: 600;
+    font-size: 2rem;
 }
 
 .titleEn {

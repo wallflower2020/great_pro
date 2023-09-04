@@ -8,6 +8,7 @@ import border1 from '../../assets/image/border1.png'
 import border4 from '../../assets/image/border4.png'
 import { PreviewTag } from '../../components/PreviewTag'
 import { Translate } from '../../components/Translate'
+import { callUe4ByMenu, callUe4ByPage, getUe4Interface } from '../../util/ue'
 
 
 const Testone: React.FC = () => {
@@ -18,20 +19,37 @@ const Testone: React.FC = () => {
         min: 0
     }
 
+    getUe4Interface().ProjectTest = (param: any) => {
+        // console.log('----???----', param)
+
+        callUe4ByPage({
+            key: '玛卡巴卡玛卡巴卡'
+        })
+    }
+
     const changeSlider = (e: any) => {
         console.log('e: ', e)
         setValue(e)
+        callUe4ByMenu({
+            key: `A1B${e + 1}`
+        })
     }
 
     const turnLeft = () => {
         if(value !== 0) {
             setValue(value - 1)
+            callUe4ByMenu({
+                key: `A1B${value}`
+            })
         }
     }
 
     const turnRight = () => {
         if(value !== 5) {
             setValue(value + 1)
+            callUe4ByMenu({
+                key: `A1B${value + 2}`
+            })
         }
     }
 

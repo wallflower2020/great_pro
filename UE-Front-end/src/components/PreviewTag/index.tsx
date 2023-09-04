@@ -27,7 +27,7 @@ const PreviewTagInr: React.FC<PreviewTagInrProps> = (props) => {
                 useCORS: true,
                 scale: window.devicePixelRatio < 3 ? window.devicePixelRatio : 2,
                 allowTaint: true,
-                backgroundColor: 'rgba(0,0,0,0.2)',
+                backgroundColor: 'rgba(0,0,0,0)',
                 // height: 600,
                 // width: 600
             }).then((canvas) => {
