@@ -1,0 +1,35 @@
+.funcbox {
+    width: 1.8vw;
+    height: 3.1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.funcbox:hover {
+    background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, #13769F 100%);
+    border-radius: 0.2vw;
+}
+
+.weather {
+    position: absolute;
+    left: -0.1vw;
+    top: 4vh;
+    width: 2vw;
+    height: 14.8vh;
+    z-index: 60;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.5vh;
+}
+
+.weatherimg {
+    width: 2vw;
+    height: 14.8vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
