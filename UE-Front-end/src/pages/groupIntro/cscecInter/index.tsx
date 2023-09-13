@@ -37,13 +37,20 @@ const cscecInter: React.FC = () => {
                     </PreviewTag>
                 </div>
             </Panel>
-            <Panel position='right'>
-                <div style={{marginTop: '8.5vh'}}>
-                    <PreviewTag id={`right${value}`}>
-                        <img src={Board[value]} alt='中刚非洲银行' style={{ width: '18vw' }}/>
-                    </PreviewTag>
-                </div>
-            </Panel>
+            {/** 图片判断改为循环调用panel组件，实现切换后panel组件重新渲染展示缩放效果 */}
+            {
+                Board.map((board, index) => {
+                    return(
+                        <Panel position='right' style={{ display: value === index ? '' : 'none' }}>
+                            <div style={{marginTop: '8.5vh'}}>
+                                <PreviewTag id={`right${index}`}>
+                                    <img src={board} alt={board} style={{ width: '18vw' }}/>
+                                </PreviewTag>
+                            </div>
+                        </Panel>
+                    )
+                })
+            }
         </div>
     )
 }

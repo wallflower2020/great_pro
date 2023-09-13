@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Panel } from "../../../components/Panel";
 import { PreviewTag } from '../../../components/PreviewTag'
 import Title from '../../../components/Title'
@@ -16,18 +16,92 @@ import boardS3 from './image/A1B4_5_3.png'
 import boardT1 from './image/A1B4_6_1.png'
 import boardW1 from './image/A1B4_7_1.png'
 import style from './style.module.css'
+import { callUe4ByMenu } from "../../../util/ue";
 
 const SevenSeries:React.FC = () => {
+    useEffect(() => {
+        callUe4ByMenu({
+            key: 'A1B4C1C系列',
+            cn: 'C系列',
+            parameters: {
+                major: 'all'
+            }
+        })
+    }, [])
+
     const [value, setValue] = useState(0)
 
     const BoardL:Array<string> = [boardC1, boardE1, boardI1, boardP1, boardS1, boardT1, boardW1]
 
-    const change = () => {
-        if(value === 0) {
-            setValue(1)
-        } else {
-            setValue(0)
-        }
+    const Seven = [
+        {
+            menu: 'A1B4C1',
+            name: 'C系列'
+        }, {
+            menu: 'A1B4C2',
+            name: 'E系列'
+        }, {
+            menu: 'A1B4C3',
+            name: 'I系列'
+        }, {
+            menu: 'A1B4C4',
+            name: 'P系列'
+        }, {
+            menu: 'A1B4C5',
+            name: 'S系列'
+        }, {
+            menu: 'A1B4C6',
+            name: 'T系列'
+        }, {
+            menu: 'A1B4C7',
+            name: 'W系列'
+        }, 
+    ]
+
+    const changeSeven = (e: any, i: any) => {
+        setValue(i)
+        callUe4ByMenu({
+            key: e.menu + e.name,
+            cn: e.name,
+            parameters: {
+                major: 'all'
+            }
+        })
+    }
+
+    const Major = [
+        {
+            name: '全部',
+            en: 'all'
+        }, {
+            name: '建筑',
+            en: 'unit'
+        }, {
+            name: '结构',
+            en: 'structure'
+        }, {
+            name: '内装',
+            en: 'built-in'
+        }, {
+            name: '给排水',
+            en: 'water'
+        }, {
+            name: '暖通',
+            en: 'heat'
+        }, {
+            name: '电气',
+            en: 'electric'
+        }, 
+    ]
+
+    const changeMajor = (e: any) => {
+        callUe4ByMenu({
+            key: Seven[value].menu + Seven[value].name,
+            cn: Seven[value].name,
+            parameters: {
+                major: e.en
+            }
+        })
     }
 
     return (
@@ -40,7 +114,7 @@ const SevenSeries:React.FC = () => {
             </Panel>
             <Panel position="right" className={style.panel}>
                 {/* C系列 */}
-                <div style={{ display: value === 0 ? '' : 'none' }} onClick={change}>
+                <div style={{ display: value === 0 ? '' : 'none' }}>
                     <PreviewTag id="rightC2">
                         <img src={boardC2} alt="樟坑径项目" style={{width: '17.6vw'}} />
                     </PreviewTag>
@@ -49,13 +123,13 @@ const SevenSeries:React.FC = () => {
                     </PreviewTag>
                 </div>
                 {/* E系列 */}
-                <div style={{ display: value === 1 ? '' : 'none' }} onClick={change}>
+                <div style={{ display: value === 1 ? '' : 'none' }}>
                     <PreviewTag id="rightE2">
                         <img src={boardE2} alt="深圳中学" style={{width: '17.6vw'}} />
                     </PreviewTag>
                 </div>
                 {/* I系列 */}
-                <div style={{ display: value === 2 ? '' : 'none' }} onClick={change}>
+                <div style={{ display: value === 2 ? '' : 'none' }}>
                     <PreviewTag id="rightI2">
                         <img src={boardI2} alt="深圳中学" style={{width: '17.6vw'}} />
                     </PreviewTag>
@@ -79,6 +153,28 @@ const SevenSeries:React.FC = () => {
                 {/* 暂无 */}
 
             </Panel>
+            <div className={style.seven}>
+                {
+                    Seven.map((item, index) => {
+                        return (
+                            <div className={style.sbutton} key={index} onClick={() => changeSeven(item, index)}>
+                                {item.name}
+                            </div>
+                        )
+                    })
+                }
+            </div>
+            <div className={style.major}>
+                {
+                    Major.map((item, index) => {
+                        return (
+                            <div className={style.sbutton} key={index} onClick={() => changeMajor(item)}>
+                                {item.name}
+                            </div>
+                        )
+                    })
+                }
+            </div>
         </div>
     )
 }
