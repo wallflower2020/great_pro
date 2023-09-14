@@ -72,25 +72,25 @@ const SevenSeries:React.FC = () => {
     const Major = [
         {
             name: '全部',
-            en: 'all'
+            en: 'All'
         }, {
             name: '建筑',
-            en: 'unit'
+            en: '建筑'
         }, {
             name: '结构',
-            en: 'structure'
+            en: '结构'
         }, {
             name: '内装',
-            en: 'built-in'
+            en: '内装'
         }, {
             name: '给排水',
-            en: 'water'
+            en: '给排水'
         }, {
             name: '暖通',
-            en: 'heat'
+            en: '暖通'
         }, {
             name: '电气',
-            en: 'electric'
+            en: '电气'
         }, 
     ]
 
