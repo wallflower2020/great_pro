@@ -8,7 +8,21 @@ const zhCN: any = {
     A1B2: '中 建 海 龙 介 绍',
     A1B3: '国 内 布 局',
     A1B4: '七 大 系 列',
-    A1B5: '重 要 项 目'
+    A1B5: '重 要 项 目',
+    all: '全部',
+    architecture: '建筑',
+    structural: '结构',
+    interior: '内装',
+    plumbing: '给排水',
+    hvac: '暖通',
+    electrical: '电气',
+    cSeries: 'C系列',
+    eSeries: 'E系列',
+    iSeries: 'I系列',
+    pSeries: 'P系列',
+    sSeries: 'S系列',
+    tSeries: 'T系列',
+    wSeries: 'W系列',
 }
 
 export default zhCN

@@ -15,8 +15,11 @@ import boardS2 from './image/A1B4_5_2.png'
 import boardS3 from './image/A1B4_5_3.png'
 import boardT1 from './image/A1B4_6_1.png'
 import boardW1 from './image/A1B4_7_1.png'
+import active from './image/active.png'
+import normal from './image/normal.png'
 import style from './style.module.css'
 import { callUe4ByMenu } from "../../../util/ue";
+import { Translate } from "../../../components/Translate";
 
 const SevenSeries:React.FC = () => {
     useEffect(() => {
@@ -30,31 +33,39 @@ const SevenSeries:React.FC = () => {
     }, [])
 
     const [value, setValue] = useState(0)
+    const [maj, setMaj] = useState(0)
 
     const BoardL:Array<string> = [boardC1, boardE1, boardI1, boardP1, boardS1, boardT1, boardW1]
 
     const Seven = [
         {
             menu: 'A1B4C1',
-            name: 'C系列'
+            name: 'C系列',
+            inter: 'cSeries'
         }, {
             menu: 'A1B4C2',
-            name: 'E系列'
+            name: 'E系列',
+            inter: 'eSeries'
         }, {
             menu: 'A1B4C3',
-            name: 'I系列'
+            name: 'I系列',
+            inter: 'iSeries'
         }, {
             menu: 'A1B4C4',
-            name: 'P系列'
+            name: 'P系列',
+            inter: 'pSeries'
         }, {
             menu: 'A1B4C5',
-            name: 'S系列'
+            name: 'S系列',
+            inter: 'sSeries'
         }, {
             menu: 'A1B4C6',
-            name: 'T系列'
+            name: 'T系列',
+            inter: 'tSeries'
         }, {
             menu: 'A1B4C7',
-            name: 'W系列'
+            name: 'W系列',
+            inter: 'wSeries'
         }, 
     ]
 
@@ -64,7 +75,7 @@ const SevenSeries:React.FC = () => {
             key: e.menu + e.name,
             cn: e.name,
             parameters: {
-                major: 'all'
+                major: Major[maj].en
             }
         })
     }
@@ -72,29 +83,37 @@ const SevenSeries:React.FC = () => {
     const Major = [
         {
             name: '全部',
-            en: 'All'
+            en: 'All',
+            inter: 'all'
         }, {
             name: '建筑',
-            en: '建筑'
+            en: '建筑',
+            inter: 'architecture'
         }, {
             name: '结构',
-            en: '结构'
+            en: '结构',
+            inter: 'structural'
         }, {
             name: '内装',
-            en: '内装'
+            en: '内装',
+            inter: 'interior'
         }, {
             name: '给排水',
-            en: '给排水'
+            en: '给排水',
+            inter: 'plumbing'
         }, {
             name: '暖通',
-            en: '暖通'
+            en: '暖通',
+            inter: 'hvac'
         }, {
             name: '电气',
-            en: '电气'
+            en: '电气',
+            inter: 'electrical'
         }, 
     ]
 
-    const changeMajor = (e: any) => {
+    const changeMajor = (e: any, i: any) => {
+        setMaj(i)
         callUe4ByMenu({
             key: Seven[value].menu + Seven[value].name,
             cn: Seven[value].name,
@@ -157,8 +176,8 @@ const SevenSeries:React.FC = () => {
                 {
                     Seven.map((item, index) => {
                         return (
-                            <div className={style.sbutton} key={index} onClick={() => changeSeven(item, index)}>
-                                {item.name}
+                            <div className={style.sbutton} key={index} onClick={() => changeSeven(item, index)} style={{ backgroundImage: value === index ? `url(${active})` : `url(${normal})` }}>
+                                <Translate id={item.inter} />
                             </div>
                         )
                     })
@@ -168,8 +187,8 @@ const SevenSeries:React.FC = () => {
                 {
                     Major.map((item, index) => {
                         return (
-                            <div className={style.sbutton} key={index} onClick={() => changeMajor(item)}>
-                                {item.name}
+                            <div className={style.sbutton} key={index} onClick={() => changeMajor(item, index)} style={{ backgroundImage: maj === index ? `url(${active})` : `url(${normal})` }}>
+                                <Translate id={item.inter} />
                             </div>
                         )
                     })

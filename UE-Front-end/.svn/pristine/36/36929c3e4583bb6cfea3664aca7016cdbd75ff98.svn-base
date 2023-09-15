@@ -1,0 +1,14 @@
+.title {
+    position: absolute;
+    left: 50%;
+    top: 6.6vh;
+    transform: translateX(-50%);
+    width: 13.7vw;
+    height: 6.3vh;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    color: white;
+}

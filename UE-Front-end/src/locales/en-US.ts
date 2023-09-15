@@ -8,7 +8,21 @@ const enUS: any = {
     A1B2: 'CSCHL Intro',
     A1B3: 'Domestic Layout',
     A1B4: 'Seven Series',
-    A1B5: 'Important Project'
+    A1B5: 'Important Project',
+    all: 'All',
+    architecture: 'Architecture',
+    structural: 'structure',
+    interior: 'Interior',
+    plumbing: 'Plumbing',
+    hvac: 'Mechanical',
+    electrical: 'Electrical',
+    cSeries: 'C Series',
+    eSeries: 'E Series',
+    iSeries: 'I Series',
+    pSeries: 'P Series',
+    sSeries: 'S Series',
+    tSeries: 'T Series',
+    wSeries: 'W Series',
 }
 
 export default enUS

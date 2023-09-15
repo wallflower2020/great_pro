@@ -48,8 +48,8 @@ const SecondaryA1: React.FC = () => {
     return (
         <div className={style.slider}>
             <Slider {...props} value={value} onChange={changeSlider}
-                railStyle={{ display: 'none' }}
-                trackStyle={{ display: 'none' }}
+                railStyle={{ backgroundColor: 'rgba(0,0,0,0)', height: '2vh' }}
+                trackStyle={{ backgroundColor: 'rgba(0,0,0,0)', height: '2vh' }}
                 handleStyle={{
                     backgroundImage: `url(${vernier})`,
                     height: '5vh',
