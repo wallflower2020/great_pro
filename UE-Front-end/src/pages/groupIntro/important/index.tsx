@@ -24,24 +24,22 @@ import board81 from './image/A1B5_8_1.png'
 import board82 from './image/A1B5_8_2.png'
 import style from './style.module.css'
 import Title from "../../../components/Title";
+import { getUe4Interface } from "../../../util/ue";
 
 const Important:React.FC = () => {
     const [value, setValue] = useState(0)
 
     const BoardL:Array<string> = [board11, board21, board31, board41, board51, board61, board71, board81]
-    
-    const change = () => {
-        if(value === 0) {
-            setValue(1)
-        } else {
-            setValue(0)
-        }
+
+    getUe4Interface().XiangMu = (param: any) => {
+        setValue(Number(param))
     }
+    
     return (
         <div>
             <Title id="cscHailong" en="CSC HAILONG" />
             <Panel position="left" className={style.panel}>
-                <div style={{ display: (value === 2 || value === 6) ? 'none' : '' }} onClick={change}>
+                <div style={{ display: (value === 2 || value === 6) ? 'none' : '' }}>
                     <PreviewTag id={`left${value}`}>
                         <img src={BoardL[value]} alt="集团介绍" style={{width: '17.5vw'}} />
                     </PreviewTag>
@@ -65,13 +63,13 @@ const Important:React.FC = () => {
             </Panel>
             <Panel position="right" className={style.panel}>
                 {/* 项目1 */}
-                <div style={{ display: value === 0 ? '' : 'none' }} onClick={change}>
+                <div style={{ display: value === 0 ? '' : 'none' }}>
                     <PreviewTag id="right12">
                         <img src={board12} alt="樟坑径项目" style={{width: '17.6vw'}} />
                     </PreviewTag>
                 </div>
                 {/* 项目2 */}
-                <div style={{ display: value === 1 ? '' : 'none' }} onClick={change}>
+                <div style={{ display: value === 1 ? '' : 'none' }}>
                     <PreviewTag id="right22">
                         <img src={board22} alt="广德学校" style={{width: '17.6vw'}} />
                     </PreviewTag>
