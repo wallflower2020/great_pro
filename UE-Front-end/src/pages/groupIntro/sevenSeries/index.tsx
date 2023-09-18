@@ -20,6 +20,7 @@ import normal from './image/normal.png'
 import style from './style.module.css'
 import { callUe4ByMenu } from "../../../util/ue";
 import { Translate } from "../../../components/Translate";
+import { Cut } from "../../../components/Cut";
 
 const SevenSeries:React.FC = () => {
     useEffect(() => {
@@ -84,31 +85,38 @@ const SevenSeries:React.FC = () => {
         {
             name: '全部',
             en: 'All',
-            inter: 'all'
+            inter: 'all',
+            show: true
         }, {
             name: '建筑',
             en: '建筑',
-            inter: 'architecture'
+            inter: 'architecture',
+            show: !(value === 0 || value === 6)
         }, {
             name: '结构',
             en: '结构',
-            inter: 'structural'
+            inter: 'structural',
+            show: true
         }, {
             name: '内装',
             en: '内装',
-            inter: 'interior'
+            inter: 'interior',
+            show: !(value === 0 || value === 4 || value === 6)
         }, {
             name: '给排水',
             en: '给排水',
-            inter: 'plumbing'
+            inter: 'plumbing',
+            show: !(value === 5)
         }, {
             name: '暖通',
             en: '暖通',
-            inter: 'hvac'
+            inter: 'hvac',
+            show: !(value === 1 || value === 3 || value === 5 || value === 6)
         }, {
             name: '电气',
             en: '电气',
-            inter: 'electrical'
+            inter: 'electrical',
+            show: !(value === 3 || value === 5 || value === 6)
         }, 
     ]
 
@@ -187,12 +195,15 @@ const SevenSeries:React.FC = () => {
                 {
                     Major.map((item, index) => {
                         return (
-                            <div className={style.sbutton} key={index} onClick={() => changeMajor(item, index)} style={{ backgroundImage: maj === index ? `url(${active})` : `url(${normal})` }}>
+                            <div className={style.sbutton} key={index} onClick={() => changeMajor(item, index)} style={{ display: item.show? '' : 'none', backgroundImage: maj === index ? `url(${active})` : `url(${normal})` }}>
                                 <Translate id={item.inter} />
                             </div>
                         )
                     })
                 }
+            </div>
+            <div className={style.cut}>
+                <Cut />
             </div>
         </div>
     )

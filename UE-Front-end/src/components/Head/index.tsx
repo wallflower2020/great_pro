@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import style from './style.module.css'
 import logo from '../../assets/image/logo.png'
 import cut from '../../assets/image/menucut.png'
-import timeline from '../../assets/image/timeline.png'
-import circle from '../../assets/image/circle1.png'
 import { Clock } from "../Clock";
 import setting from '../../assets/image/setting.png'
 import sound from '../../assets/image/sound.png'
@@ -13,24 +11,14 @@ import { Weather } from "../Weather";
 import { Timeline } from "../Timeline";
 
 const Head: React.FC = () => {
-    const [p, setP] = useState(0)
-
-    const setPercent = (h: any) => {
-        setP(h/24)
-        // console.log('小时', h)
-    }
 
     return <>
         <div className={style.head}>
             <img alt="logo" src={logo} className={style.logo} />
             <img alt="cut" src={cut} className={style.cut} />
             <div className={style.clock}>
-                <Clock getHour={(h: any) => setPercent(h)} />
+                <Clock />
             </div>
-            {/* <div className={style.time}>
-                <img alt="timeline" src={timeline} className={style.timeline} />
-                <img alt="circle1" src={circle} className={style.circle1} style={{ left: `${p * 90 + 4}%` }}/> 
-            </div> */}
             <Timeline />
             <div className={style.func}>
                 <TransButton />

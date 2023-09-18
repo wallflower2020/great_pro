@@ -44,3 +44,15 @@
 .sbutton:hover {
     background-image: url('./image/active.png');
 }
+
+.cut {
+    position: absolute;
+    z-index: 999;
+    width: 1.8vw;
+    height: 3.1vh;
+    top: 0.5vh;
+    right: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
