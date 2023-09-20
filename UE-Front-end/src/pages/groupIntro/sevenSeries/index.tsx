@@ -101,22 +101,22 @@ const SevenSeries:React.FC = () => {
             name: '内装',
             en: '内装',
             inter: 'interior',
-            show: !(value === 0 || value === 4 || value === 6)
+            show: !(value === 2 || value === 3 || value === 4 || value === 6)
         }, {
             name: '给排水',
             en: '给排水',
             inter: 'plumbing',
-            show: !(value === 5)
+            show: !(value === 4 || value === 5)
         }, {
             name: '暖通',
             en: '暖通',
             inter: 'hvac',
-            show: !(value === 1 || value === 3 || value === 5 || value === 6)
+            show: !(value === 1 || value === 5 || value === 6)
         }, {
             name: '电气',
             en: '电气',
             inter: 'electrical',
-            show: !(value === 3 || value === 5 || value === 6)
+            show: !(value === 5 || value === 6)
         }, 
     ]
 

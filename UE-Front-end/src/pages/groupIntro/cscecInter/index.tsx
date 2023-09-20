@@ -41,7 +41,7 @@ const cscecInter: React.FC = () => {
             {
                 Board.map((board, index) => {
                     return(
-                        <Panel position='right' style={{ display: value === index ? '' : 'none' }}>
+                        <Panel position='right' style={{ display: value === index ? '' : 'none' }} key={index}>
                             <div style={{marginTop: '8.5vh'}}>
                                 <PreviewTag id={`right${index}`}>
                                     <img src={board} alt={board} style={{ width: '18vw' }}/>
