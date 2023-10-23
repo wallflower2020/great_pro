@@ -1,14 +1,14 @@
 import React from 'react'
 import { Panel } from '../../components/Panel';
 import { PreviewTag } from '../../components/PreviewTag';
-import TravelTicket from './travelTicket';
+// import TravelTicket from './travelTicket';
 
 const CoIntro: React.FC = () => {
     return <>
         <Panel position='left'>
             <PreviewTag id='left1'>
-                这是预览组件
-                <TravelTicket />
+                {/* 这是预览组件
+                <TravelTicket /> */}
             </PreviewTag>
         </Panel>
     </>
