@@ -78,6 +78,12 @@ const SevenSeries:React.FC = () => {
 
     const changeSeven = (e: any, i: any) => {
         setValue(i)
+        setJzState(false)
+        setJgState(false)
+        setNzState(false)
+        setGpsState(false)
+        setNtState(false)
+        setDqState(false)
         callUe4ByMenu({
             key: e.menu + e.name,
             cn: e.name,
