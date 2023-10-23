@@ -28,7 +28,8 @@ const SevenSeries:React.FC = () => {
             key: 'A1B4C1C系列',
             cn: 'C系列',
             parameters: {
-                major: 'all'
+                major: 'All',
+                hidden: '0'
             }
         })
     }, [])
