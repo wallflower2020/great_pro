@@ -34,7 +34,13 @@ const SevenSeries:React.FC = () => {
     }, [])
 
     const [value, setValue] = useState(0)
-    const [maj, setMaj] = useState(0)
+    // const [maj, setMaj] = useState(0)
+    const [jzState, setJzState] = useState(false)
+    const [jgState, setJgState] = useState(false)
+    const [nzState, setNzState] = useState(false)
+    const [gpsState, setGpsState] = useState(false)
+    const [ntState, setNtState] = useState(false)
+    const [dqState, setDqState] = useState(false)
 
     const BoardL:Array<string> = [boardC1, boardE1, boardI1, boardP1, boardS1, boardT1, boardW1]
 
@@ -76,7 +82,8 @@ const SevenSeries:React.FC = () => {
             key: e.menu + e.name,
             cn: e.name,
             parameters: {
-                major: Major[maj].en
+                major: 'All',
+                hidden: '0'
             }
         })
     }
@@ -86,49 +93,83 @@ const SevenSeries:React.FC = () => {
             name: '全部',
             en: 'All',
             inter: 'all',
-            show: true
+            show: true,
+            hidden: (jzState || jgState || nzState || gpsState || ntState || dqState)
         }, {
             name: '建筑',
             en: '建筑',
             inter: 'architecture',
-            show: !(value === 0 || value === 6)
+            show: !(value === 0 || value === 6),
+            hidden: jzState
         }, {
             name: '结构',
             en: '结构',
             inter: 'structural',
-            show: true
+            show: true,
+            hidden: jgState
         }, {
             name: '内装',
             en: '内装',
             inter: 'interior',
-            show: !(value === 2 || value === 3 || value === 4 || value === 6)
+            show: !(value === 2 || value === 3 || value === 4 || value === 5 || value === 6),
+            hidden: nzState
         }, {
             name: '给排水',
             en: '给排水',
             inter: 'plumbing',
-            show: !(value === 4 || value === 5)
+            show: !(value === 4 || value === 5),
+            hidden: gpsState
         }, {
             name: '暖通',
             en: '暖通',
             inter: 'hvac',
-            show: !(value === 1 || value === 5 || value === 6)
+            show: !(value === 1 || value === 5 || value === 6),
+            hidden: ntState
         }, {
             name: '电气',
             en: '电气',
             inter: 'electrical',
-            show: !(value === 5 || value === 6)
+            show: !(value === 5 || value === 6),
+            hidden: dqState
         }, 
     ]
 
     const changeMajor = (e: any, i: any) => {
-        setMaj(i)
+        // setMaj(i)
         callUe4ByMenu({
             key: Seven[value].menu + Seven[value].name,
             cn: Seven[value].name,
             parameters: {
-                major: e.en
+                major: e.en,
+                hidden: e.hidden? '0' : '1'
             }
         })
+        switch (i) {
+            case 0: {
+                if(Major[0].hidden) {
+                    setJzState(false)
+                    setJgState(false)
+                    setNzState(false)
+                    setGpsState(false)
+                    setNtState(false)
+                    setDqState(false)
+                } else {
+                    setJzState(true)
+                    setJgState(true)
+                    setNzState(true)
+                    setGpsState(true)
+                    setNtState(true)
+                    setDqState(true)
+                }
+            }; break
+            case 1: setJzState(!jzState); break
+            case 2: setJgState(!jgState); break
+            case 3: setNzState(!nzState); break
+            case 4: setGpsState(!gpsState); break
+            case 5: setNtState(!ntState); break
+            case 6: setDqState(!dqState); break
+
+        }
     }
 
     return (
@@ -195,7 +236,7 @@ const SevenSeries:React.FC = () => {
                 {
                     Major.map((item, index) => {
                         return (
-                            <div className={style.sbutton} key={index} onClick={() => changeMajor(item, index)} style={{ display: item.show? '' : 'none', backgroundImage: maj === index ? `url(${active})` : `url(${normal})` }}>
+                            <div className={style.sbutton} key={index} onClick={() => changeMajor(item, index)} style={{ display: item.show? '' : 'none', backgroundImage: !item.hidden ? `url(${active})` : `url(${normal})` }}>
                                 <Translate id={item.inter} />
                             </div>
                         )
