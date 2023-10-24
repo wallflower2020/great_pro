@@ -30,7 +30,10 @@ const enUS: any = {
     medical: 'medical',
     recreation: 'recreation',
     landscape: 'landscape',
-    traffic: 'traffic'
+    traffic: 'traffic',
+    inside: 'inside',
+    environment: 'environment',
+    gardenTour: 'gardenTour'
 }
 
 export default enUS

@@ -30,7 +30,10 @@ const zhCN: any = {
     medical: '医疗',
     recreation: '娱乐',
     landscape: '景观',
-    traffic: '交通'
+    traffic: '交通',
+    inside: '内部配套',
+    environment: '办公环境',
+    gardenTour: '园林漫游'
 }
 
 export default zhCN

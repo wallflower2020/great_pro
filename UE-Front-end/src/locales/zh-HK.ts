@@ -25,12 +25,15 @@ const zhHK: any = {
     wSeries: 'W系列',
     regional: '區域劃分',
     facilities: '配套設施',
-    business: '',
-    education: '',
-    medical: '',
-    recreation: '',
-    landscape: '',
-    traffic: ''
+    business: '商業',
+    education: '教育',
+    medical: '醫療',
+    recreation: '娛樂',
+    landscape: '景觀',
+    traffic: '交通',
+    inside: '內部配套',
+    environment: '辦公環境',
+    gardenTour: '園林漫遊'
 }
 
 export default zhHK

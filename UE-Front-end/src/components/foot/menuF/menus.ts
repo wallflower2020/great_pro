@@ -49,6 +49,6 @@ export const menus = [
         "name": "公司介绍",
         "en": "companyIntroduction",
         "tag": "A3",
-        "path": "/digitalLargeScreen"
+        "path": "/companyIntro"
     }
 ]
