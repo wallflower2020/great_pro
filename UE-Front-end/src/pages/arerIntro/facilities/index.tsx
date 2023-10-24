@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { Panel } from '../../../components/Panel'
+import React, { useState, useEffect } from 'react'
 import style from './style.module.css'
 import { Translate } from '../../../components/Translate'
 import active from '../../groupIntro/sevenSeries/image/active.png'
@@ -7,6 +6,16 @@ import normal from '../../groupIntro/sevenSeries/image/normal.png'
 import { callUe4ByMenu } from '../../../util/ue'
 
 const Facilities: React.FC<any> = () => {
+    useEffect(() => {
+        callUe4ByMenu({
+            key: 'A2B2C1商业',
+            cn: '商业',
+            parameters: {
+                Menu: 'A2B2C1'
+            }
+        })
+    }, [])
+
     const [value, setValue] = useState(0)
     const Facility = [
         {
