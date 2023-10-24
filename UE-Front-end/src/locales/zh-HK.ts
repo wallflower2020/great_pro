@@ -23,6 +23,8 @@ const zhHK: any = {
     sSeries: 'S系列',
     tSeries: 'T系列',
     wSeries: 'W系列',
+    regional: '區域劃分',
+    facilities: '配套設施'
 }
 
 export default zhHK

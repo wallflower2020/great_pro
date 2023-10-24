@@ -23,6 +23,8 @@ const enUS: any = {
     sSeries: 'S Series',
     tSeries: 'T Series',
     wSeries: 'W Series',
+    regional: 'Regional Division',
+    facilities: 'Supporting Facilities'
 }
 
 export default enUS

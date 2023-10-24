@@ -98,7 +98,7 @@ const SevenSeries:React.FC = () => {
     const Major = [
         {
             name: '全部',
-            en: 'entire',
+            en: 'all',
             inter: 'all',
             show: true,
             hidden: (jzState || jgState || nzState || gpsState || ntState || dqState)

@@ -23,6 +23,8 @@ const zhCN: any = {
     sSeries: 'S系列',
     tSeries: 'T系列',
     wSeries: 'W系列',
+    regional: '区域划分',
+    facilities: '配套设施'
 }
 
 export default zhCN
