@@ -1,0 +1,23 @@
+.part {
+    position: absolute;
+    left: -12vw;
+    bottom: 7.4vh;
+    width: 5.3vw;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.sbutton {
+    display: flex;
+    padding-left: 1.4vw;
+    width: 100%;
+    height: 2.8vh;
+    color: white;
+    background-image: url('../../../../../pages/groupIntro/sevenSeries/image/normal.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0.75rem;
+    line-height: 2.5vh;
+}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import style from './style.module.css'
 import { Slider } from 'antd'
 import slider from '../../../../../assets/image/slider.png'

@@ -136,7 +136,7 @@ const SevenSeries:React.FC = () => {
             name: '电气',
             en: '电气',
             inter: 'electrical',
-            show: !(value === 5 || value === 6),
+            show: !(value === 6),
             hidden: dqState
         }, 
     ]

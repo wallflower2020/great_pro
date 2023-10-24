@@ -10,6 +10,7 @@ import co from '../../../assets/image/CO.png'
 import { Translate } from '../../Translate';
 import { menus } from './menus';
 import SecondaryA1 from './SecondaryMenus/A1';
+import SecondaryA2 from './SecondaryMenus/A2';
 
 const MenuF: React.FC<any> = () => {
     const navigate = useNavigate()
@@ -70,6 +71,7 @@ const MenuF: React.FC<any> = () => {
                 })
             }
             {(curr === 0) && <SecondaryA1 />}
+            {(curr === 1) && <SecondaryA2 />}
         </div>
     )
 }
