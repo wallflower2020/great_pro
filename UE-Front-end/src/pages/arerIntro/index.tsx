@@ -1,15 +1,16 @@
-import React from 'react'
-import { Panel } from '../../components/Panel'
-// import { PreviewTag } from '../../components/PreviewTag'
+import React, { useEffect } from 'react'
+import { useNavigate } from 'react-router'
 
 const ArerIntro: React.FC = () => {
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        navigate('/arerIntro/regional')
+    }, [])
 
     return (
         <div>
-            <Panel position='left'>
-            </Panel>
-            <Panel position='right'>
-            </Panel>
+            
         </div>
     )
 }

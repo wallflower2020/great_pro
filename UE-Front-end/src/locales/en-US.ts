@@ -24,7 +24,13 @@ const enUS: any = {
     tSeries: 'T Series',
     wSeries: 'W Series',
     regional: 'Regional Division',
-    facilities: 'Supporting Facilities'
+    facilities: 'Supporting Facilities',
+    business: 'business',
+    education: 'education',
+    medical: 'medical',
+    recreation: 'recreation',
+    landscape: 'landscape',
+    traffic: 'traffic'
 }
 
 export default enUS

@@ -24,7 +24,13 @@ const zhCN: any = {
     tSeries: 'T系列',
     wSeries: 'W系列',
     regional: '区域划分',
-    facilities: '配套设施'
+    facilities: '配套设施',
+    business: '商业',
+    education: '教育',
+    medical: '医疗',
+    recreation: '娱乐',
+    landscape: '景观',
+    traffic: '交通'
 }
 
 export default zhCN
