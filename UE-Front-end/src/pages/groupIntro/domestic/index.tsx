@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Title from "../../../components/Title";
 import { Panel } from "../../../components/Panel";
 import { PreviewTag } from "../../../components/PreviewTag";
@@ -15,7 +15,8 @@ const Domestic: React.FC = () => {
 
     const Board:Array<string> = [board2, board3, board4, board5, board6, board7, board8]
 
-    const [value, setValue] = useState(0)
+    // const [value, setValue] = useState(0)
+    const value = 0
 
     return (
         <div>

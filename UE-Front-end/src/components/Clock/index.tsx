@@ -9,46 +9,20 @@ export const Clock = (props: clockProps) => {
   const { getHour } = props
   const timmer: any = useRef()
   const [Hour, setHour] = useState(0);
-  const [Seconds, setSeconds] = useState('');
   const [Minutes, setMinutes] = useState('');
-  const [Year, setYear] = useState(0);
-  const [Month, setMonth] = useState(0);
-  const [Day, setDay] = useState(0);
-  const [Weekday, setWeekday] = useState(0)
-
-  const weekdayMap: any = {
-    1: '一',
-    2: '二',
-    3: '三',
-    4: '四',
-    5: '五',
-    6: '六',
-    7: '日'
-  }
 
   const getNewDate = () => {
     const time: Date = new Date();
-    const year: number = time.getFullYear();
-    const month: number = time.getMonth() + 1;
-    const day: number = time.getDate();
-    const wday: number = time.getDay()
     const hour: number = time.getHours();
     const minutes: any = time.getMinutes();
-    const s = time.getSeconds();
-    const seconds: any = s <= 9 ? "0" + s : s;
     // const t = `${year}年${month}月${day}日 ${hour}:${minutes}:${seconds}`
     setHour(hour)
     getHour&&getHour(hour)
-    setSeconds(seconds)
     if (minutes < 10) {
       setMinutes(`0${minutes}`)
     } else {
       setMinutes(minutes)
     }
-    setYear(year)
-    setMonth(month)
-    setDay(day)
-    setWeekday(weekdayMap[wday])
   }
 
   useEffect(() => {

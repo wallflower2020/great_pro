@@ -51,9 +51,9 @@ export const get3dPieActiveChart = async (result: chartInterface) => {
           y: function (u:any, v:any) {
             return ((Math.sin(v) * Math.cos(u) + Math.cos(u)) / Math.PI) * 2;
           },
-          z: function (u:any, v:any) {
-            return Math.cos(v) > 0 ? -0.5 : -5;
-          },
+          // z: function (u:any, v:any) {
+          //   return Math.cos(v) > 0 ? -0.5 : -5;
+          // },
         },
       });
 
@@ -86,9 +86,9 @@ export const get3dPieActiveChart = async (result: chartInterface) => {
           y: function (u:any, v:any) {
             return ((Math.sin(v) * Math.cos(u) + Math.cos(u)) / Math.PI) * 2;
           },
-          z: function (u:any, v:any) {
-            return Math.cos(v) > 0 ? -5 : -7;
-          },
+          // z: function (u:any, v:any) {
+          //   return Math.cos(v) > 0 ? -5 : -7;
+          // },
         },
       });
       series.push({
@@ -121,9 +121,9 @@ export const get3dPieActiveChart = async (result: chartInterface) => {
           y: function (u:any, v:any) {
             return ((Math.sin(v) * Math.cos(u) + Math.cos(u)) / Math.PI) * 2.2;
           },
-          z: function (u:any, v:any) {
-            return Math.cos(v) > 0 ? -7 : -7;
-          },
+          // z: function (u:any, v:any) {
+          //   return Math.cos(v) > 0 ? -7 : -7;
+          // },
         },
       });
 
@@ -196,7 +196,7 @@ export const get3dPieActiveChart = async (result: chartInterface) => {
         label: {
             show: true,
             position: 'outside',
-            formatter: (data: any, type: any) => {
+            formatter: (data: any) => {
                 let info = data.data;
                 let str = `{icon|●}{b|${info.name}}\n {c|${info.value}}`; //这里对不同的内容进行标识 a，b，或者可以随便自己起个别的名字
 
