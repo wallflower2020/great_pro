@@ -9,9 +9,19 @@ import close from '../../assets/image/close.png'
 import { TransButton } from "../Translate/TransButton";
 import { Weather } from "../Weather";
 import { Timeline } from "../Timeline";
+import { callUe4ByTitle } from '../../util/ue'
 
 const Head: React.FC = () => {
 
+    const closes = () => {
+        callUe4ByTitle({
+            key: 'quit',
+            cn: '关闭',
+            parameters: {
+                value: 'quit'
+            }
+        })
+    }
     return <>
         <div className={style.head}>
             <img alt="logo" src={logo} className={style.logo} />
@@ -30,7 +40,7 @@ const Head: React.FC = () => {
                 <div className={style.funcbox}>
                     <img alt="sound" src={sound} style={{ width: '1.1vw' }} />
                 </div>
-                <div className={style.funcbox}>
+                <div className={style.funcbox} onClick={() => closes()}>
                     <img alt="close" src={close} style={{ width: '1.1vw' }} />
                 </div>
                 <div style={{ width: '0.2vw' }} />
