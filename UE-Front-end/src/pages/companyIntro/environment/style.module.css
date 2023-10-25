@@ -1,0 +1,14 @@
+.img {
+    width: 40vw;
+    height: 40vh;
+}
+
+.box {
+    width: 40vw;
+    height: 40vh;
+    /* background-color: aqua; */
+    position: absolute;
+    left: 30vw;
+    top: 30vh;
+    z-index: 999;
+}
