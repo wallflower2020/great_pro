@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import timeline from '../../assets/image/timeline.png'
 import circle from '../../assets/image/circle1.png'
 import style from './style.module.css'
 import { Slider } from 'antd'
-import { callUe4ByTitle } from '../../util/ue'
+import { callUe4ByTitle, getUe4Interface } from '../../util/ue'
 
 /**
  * 
@@ -11,6 +11,12 @@ import { callUe4ByTitle } from '../../util/ue'
  * 精确到半小时，向UE发送时间变更指令
  */
 export const Timeline: React.FC = () => {
+    const [time, setTime] = useState(28)
+
+    getUe4Interface().SetWebTime = (param: string) => {
+        setTime(Number(param) * 2)
+    }
+
     const props = {
         min: 0,
         max: 48
@@ -42,6 +48,7 @@ export const Timeline: React.FC = () => {
                         backgroundSize: '100% 100%',
                     }}
                     onChange={changeTime}
+                    value={time}
                 />
             </div>
         </div>
