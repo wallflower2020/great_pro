@@ -30,6 +30,7 @@ export const Timeline: React.FC = () => {
                 Time: (e / 2).toString()
             }
         })
+        setTime(e)
     }
 
     return (
