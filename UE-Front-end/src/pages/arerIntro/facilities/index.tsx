@@ -32,7 +32,7 @@ const Facilities: React.FC<any> = () => {
             inter: 'medical'
         }, {
             menu: 'A2B2C4',
-            name: '娱乐',
+            name: '文化',
             inter: 'recreation'
         }, {
             menu: 'A2B2C5',

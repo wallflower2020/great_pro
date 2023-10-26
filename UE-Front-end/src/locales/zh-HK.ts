@@ -28,7 +28,7 @@ const zhHK: any = {
     business: '商業',
     education: '教育',
     medical: '醫療',
-    recreation: '娛樂',
+    recreation: '文化',
     landscape: '景觀',
     traffic: '交通',
     inside: '內部配套',

@@ -28,7 +28,7 @@ const zhCN: any = {
     business: '商业',
     education: '教育',
     medical: '医疗',
-    recreation: '娱乐',
+    recreation: '文化',
     landscape: '景观',
     traffic: '交通',
     inside: '内部配套',
