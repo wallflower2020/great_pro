@@ -11,15 +11,15 @@ import { callUe4ByTitle, getUe4Interface } from '../../util/ue'
  * 精确到半小时，向UE发送时间变更指令
  */
 export const Timeline: React.FC = () => {
-    const [time, setTime] = useState(28)
+    const [time, setTime] = useState(56)
 
     getUe4Interface().SetWebTime = (param: string) => {
-        setTime(Number(param) * 2)
+        setTime(Number(param) * 4)
     }
 
     const props = {
         min: 0,
-        max: 48
+        max: 96
     }
 
     const changeTime = (e: number) => {
@@ -27,7 +27,7 @@ export const Timeline: React.FC = () => {
             key: 'TimeLine',
             cn: '时间线',
             parameters: {
-                Time: (e / 2).toString()
+                Time: (e / 4).toString()
             }
         })
         setTime(e)
