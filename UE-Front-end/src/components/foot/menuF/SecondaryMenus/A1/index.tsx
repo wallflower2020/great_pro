@@ -61,6 +61,16 @@ const SecondaryA1: React.FC = () => {
         })
     }
 
+    const resetPage = () => {
+        callUe4ByMenu({
+            key: menus[0].children![value].tag + menus[0].children![value].name,
+            cn: menus[0].children![value].name,
+            parameters: {
+                Menu: menus[0].children![value].tag
+            }
+        })
+    }
+
     const turnLeft = () => {
         if(value !== 0) {
             changeSlider(value - 1)
@@ -87,8 +97,9 @@ const SecondaryA1: React.FC = () => {
                 }}
                 tooltip={{
                     open: true,
-                    formatter: (name) => formatter(name)
+                    formatter: (name) => <div onClick={() => resetPage()}>{formatter(name)}</div>
                 }}
+                
             />
             <img src={slider} className={style.sliderImg} />
             <div className={style.turn} style={{ left: '-1vw' }} onClick={turnLeft} />
