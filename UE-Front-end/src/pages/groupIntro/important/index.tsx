@@ -31,7 +31,7 @@ const Important:React.FC = () => {
 
     const BoardL:Array<string> = [board11, board21, board31, board41, board51, board61, board71, board81]
 
-    getUe4Interface().XiangMu = (param: any) => {
+    getUe4Interface().Introduce = (param: any) => {
         setValue(Number(param))
     }
     
