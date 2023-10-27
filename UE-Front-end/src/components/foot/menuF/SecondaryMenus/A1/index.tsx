@@ -3,7 +3,7 @@ import style from './style.module.css'
 import { Slider } from 'antd'
 import slider from '../../../../../assets/image/slider.png'
 import vernier from '../../../../../assets/image/vernier.png'
-import { callUe4ByMenu } from '../../../../../util/ue'
+import { callUe4ByMenu, getUe4Interface } from '../../../../../util/ue'
 import { Translate } from '../../../../Translate'
 import { useNavigate } from 'react-router'
 import { menus } from '../../menus'
@@ -12,25 +12,25 @@ const SecondaryA1: React.FC = () => {
     const [value, setValue] = useState(0)
     const navigate = useNavigate()
 
-    // let auto: any = null
+    let auto: any = null
 
-    // const funcA = () => {
-    //     console.log(value)
-    //     auto = setTimeout(() => {
-    //         switch(value){
-    //             case 0: navigate('/groupIntro/cschlIntro'); break
-    //             case 1: navigate('/groupIntro/domestic'); break
-    //             case 2: navigate('/groupIntro/sevenSeries'); break
-    //             case 3: navigate('/groupIntro/important'); break
-    //             case 4: navigate('/groupIntro/cscecInter'); break
-    //         }
-    //         setValue(value + 1)
-    //     }, 6000)
-    // }
+    const funcA = () => {
+        console.log(value)
+        auto = setTimeout(() => {
+            switch(value){
+                case 0: navigate('/groupIntro/cschlIntro'); break
+                case 1: navigate('/groupIntro/domestic'); break
+                case 2: navigate('/groupIntro/sevenSeries'); break
+                case 3: navigate('/groupIntro/important'); break
+                case 4: navigate('/groupIntro/cscecInter'); break
+            }
+            setValue(value + 1)
+        }, 6000)
+    }
 
-    // const funcB = () => {
-    //     clearTimeout(auto)
-    // }
+    const funcB = () => {
+        clearTimeout(auto)
+    }
 
     // useEffect(() => {
     //     if(value === 5) {
@@ -39,6 +39,18 @@ const SecondaryA1: React.FC = () => {
     //         funcA()
     //     }
     // }, [value])
+
+    getUe4Interface().change = () => {
+        if(value === 5) {
+            setValue(0)
+        } else {
+            funcA()
+        }
+    }
+
+    getUe4Interface().stop = () => {
+        funcB()
+    }
 
     const props = {
         max: 4,
