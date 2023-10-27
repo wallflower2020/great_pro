@@ -28,7 +28,7 @@ const SecondaryA1: React.FC = () => {
 
     useEffect(() => {
         if(flag > -1) {
-            if(flag === 5) {
+            if(flag === 4) {
                 setFlag(0)
             } else { 
                 funcA()
