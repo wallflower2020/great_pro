@@ -16,7 +16,7 @@ const cscecInter: React.FC = () => {
 
     const Board:Array<string> = [board2, board3, board4, board5, board6, board7, board8]
 
-    const [value, setValue] = useState(0)
+    const [value, setValue] = useState(-1)
     getUe4Interface().Introduce = (param: any) => {
         changeImg(Number(param))
     }
