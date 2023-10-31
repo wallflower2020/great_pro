@@ -19,15 +19,15 @@ export const menus = [
                 "tag": "A1B1",
                 "path": "/cscecInter"
             }, {
-                "name": "中建海龙介绍",
+                "name": "国内布局",
                 "en": "A1B2",
                 "tag": "A1B2",
-                "path": "/cschlIntro"
+                "path": "/domestic"
             }, {
-                "name": "国内布局",
+                "name": "中建海龙介绍",
                 "en": "A1B3",
                 "tag": "A1B3",
-                "path": "/domestic"
+                "path": "/cschlIntro"
             }, {
                 "name": "七大主题",
                 "en": "A1B4",
