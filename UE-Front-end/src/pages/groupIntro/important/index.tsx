@@ -1,35 +1,29 @@
 import React, { useState } from "react";
 import { Panel } from "../../../components/Panel";
 import { PreviewTag } from "../../../components/PreviewTag";
-import board11 from './image/A1B5_1_1.png'
-import board12 from './image/A1B5_1_2.png'
-import board21 from './image/A1B5_2_1.png'
-import board22 from './image/A1B5_2_2.png'
-import board31 from './image/A1B5_3_1.png'
-import board32 from './image/A1B5_3_2.png'
-import board33 from './image/A1B5_3_3.png'
-import board34 from './image/A1B5_3_4.png'
-import board41 from './image/A1B5_4_1.png'
-import board42 from './image/A1B5_4_2.png'
-import board51 from './image/A1B5_5_1.png'
-import board52 from './image/A1B5_5_2.png'
-import board61 from './image/A1B5_6_1.png'
-import board62 from './image/A1B5_6_2.png'
-import board63 from './image/A1B5_6_3.png'
-import board71 from './image/A1B5_7_1.png'
-import board72 from './image/A1B5_7_2.png'
-import board73 from './image/A1B5_7_3.png'
-import board74 from './image/A1B5_7_4.png'
-import board81 from './image/A1B5_8_1.png'
-import board82 from './image/A1B5_8_2.png'
+import board1_1 from './image/A1B5_1_L_1.png'
+import board1_2 from './image/A1B5_1_L_2.png'
+import board1_3 from './image/A1B5_1_L_3.png'
+import board1_4 from './image/A1B5_1_L_4.png'
+import board2_1 from './image/A1B5_2_L_1.png'
+import board3_1 from './image/A1B5_3_L_1.png'
+import board4_1 from './image/A1B5_4_L_1.png'
+import board5_1 from './image/A1B5_5_L_1.png'
+import board1_5 from './image/A1B5_1_R_1.png'
+import board2_2 from './image/A1B5_2_R_1.png'
+import board3_2 from './image/A1B5_3_R_1.png'
+import board4_2 from './image/A1B5_4_R_1.png'
+import board5_2 from './image/A1B5_5_R_1.png'
+import board1_6 from './image/A1B5_1_R_2.png'
+import board1_7 from './image/A1B5_1_R_3.png'
+import board1_8 from './image/A1B5_1_R_4.png'
 import style from './style.module.css'
 import Title from "../../../components/Title";
 import { getUe4Interface } from "../../../util/ue";
+// import { Carousel } from "antd";
 
 const Important:React.FC = () => {
     const [value, setValue] = useState(0)
-
-    const BoardL:Array<string> = [board11, board21, board31, board41, board51, board61, board71, board81]
 
     getUe4Interface().Introduce = (param: any) => {
         setValue(Number(param))
@@ -39,87 +33,77 @@ const Important:React.FC = () => {
         <div>
             <Title id="cscHailong" en="CSC HAILONG" />
             <Panel position="left" className={style.panel}>
-                <div style={{ display: (value === 2 || value === 6) ? 'none' : '' }}>
-                    <PreviewTag id={`left${value}`}>
-                        <img src={BoardL[value]} alt="集团介绍" style={{width: '17.5vw'}} />
+                <div style={{ display: value === 0 ? '' : 'none' }}>
+                    <div style={{ width: '17.5vw' }}>
+                        <PreviewTag id={`left${value}`}>
+                            <img src={board1_1} alt="集团介绍1" style={{width: '17.5vw'}} />
+                        </PreviewTag>
+                        {/* <Carousel autoplay>
+                            <PreviewTag id={`left${value}`}>
+                                <img src={board1_1} alt="集团介绍" style={{width: '17.5vw'}} />
+                            </PreviewTag>
+                            <PreviewTag id={`left${value}`}>
+                                <img src={board1_2} alt="集团介绍" style={{width: '17.5vw'}} />
+                            </PreviewTag>
+                            <PreviewTag id={`left${value}`}>
+                                <img src={board1_3} alt="集团介绍" style={{width: '17.5vw'}} />
+                            </PreviewTag>
+                            <PreviewTag id={`left${value}`}>
+                                <img src={board1_4} alt="集团介绍" style={{width: '17.5vw'}} />
+                            </PreviewTag>
+                        </Carousel> */}
+                    </div>
+                </div>
+                <div style={{ display: value === 1 ? '' : 'none' }}>
+                    <PreviewTag id="right21">
+                        <img src={board2_1} alt="集团介绍2" style={{width: '17.6vw'}} />
                     </PreviewTag>
                 </div>
                 <div style={{ display: value === 2 ? '' : 'none' }}>
                     <PreviewTag id="right31">
-                        <img src={board31} alt="集团介绍31" style={{width: '17.6vw'}} />
-                    </PreviewTag>
-                    <PreviewTag id="right32">
-                        <img src={board32} alt="烟台驿站" style={{width: '17.6vw'}} />
+                        <img src={board3_1} alt="集团介绍3" style={{width: '17.6vw'}} />
                     </PreviewTag>
                 </div>
-                <div style={{ display: value === 6 ? '' : 'none' }}>
-                    <PreviewTag id="right71">
-                        <img src={board71} alt="集团介绍71" style={{width: '17.6vw'}} />
+                <div style={{ display: value === 3 ? '' : 'none' }}>
+                    <PreviewTag id="right41">
+                        <img src={board4_1} alt="集团介绍3" style={{width: '17.6vw'}} />
                     </PreviewTag>
-                    <PreviewTag id="right72">
-                        <img src={board72} alt="将军医院" style={{width: '17.6vw'}} />
+                </div>
+                <div style={{ display: value === 4 ? '' : 'none' }}>
+                    <PreviewTag id="right51">
+                        <img src={board5_1} alt="集团介绍3" style={{width: '17.6vw'}} />
                     </PreviewTag>
                 </div>
             </Panel>
             <Panel position="right" className={style.panel}>
-                {/* 项目1 */}
+                {/* 深圳 */}
                 <div style={{ display: value === 0 ? '' : 'none' }}>
                     <PreviewTag id="right12">
-                        <img src={board12} alt="樟坑径项目" style={{width: '17.6vw'}} />
+                        <img src={board1_5} alt="樟坑径项目" style={{width: '17.6vw'}} />
                     </PreviewTag>
                 </div>
-                {/* 项目2 */}
+                {/* 合肥 */}
                 <div style={{ display: value === 1 ? '' : 'none' }}>
                     <PreviewTag id="right22">
-                        <img src={board22} alt="广德学校" style={{width: '17.6vw'}} />
+                        <img src={board2_2} alt="骆岗公园" style={{width: '17.6vw'}} />
                     </PreviewTag>
                 </div>
-                {/* 项目3 */}
+                {/* 广德 */}
                 <div style={{ display: value === 2 ? '' : 'none' }}>
-                    {/* <PreviewTag id="rightI2">
-                        <img src={board32} alt="深圳中学" style={{width: '17.6vw'}} />
-                    </PreviewTag> */}
-                    <PreviewTag id="right33">
-                        <img src={board33} alt="集团介绍32" style={{width: '17.6vw'}} />
-                    </PreviewTag>
                     <PreviewTag id="right34">
-                        <img src={board34} alt="坝光酒店" style={{width: '17.6vw'}} />
+                        <img src={board3_2} alt="广德学校" style={{width: '17.6vw'}} />
                     </PreviewTag>
                 </div>
-                {/* 项目4 */}
+                {/* 山东 */}
                 <div style={{ display: value === 3 ? '' : 'none' }}>
                     <PreviewTag id="right42">
-                        <img src={board42} alt="长圳学校" style={{width: '17.6vw'}} />
+                        <img src={board4_2} alt="烟台莱山酒店" style={{width: '17.6vw'}} />
                     </PreviewTag>
                 </div>
-                {/* 项目5 */}
+                {/* 香港 */}
                 <div style={{ display: value === 4 ? '' : 'none' }}>
                     <PreviewTag id="right52">
-                        <img src={board52} alt="香港感染控制中心" style={{width: '17.6vw'}} />
-                    </PreviewTag>
-                </div>
-                {/* 项目6 */}
-                <div style={{ display: value === 5 ? '' : 'none' }}>
-                    <PreviewTag id="right62">
-                        <img src={board62} alt="竹蒿湾社区" style={{width: '17.6vw'}} />
-                    </PreviewTag>
-                    <PreviewTag id="right63">
-                        <img src={board63} alt="后德社区" style={{width: '17.6vw'}} />
-                    </PreviewTag>
-                </div>
-                {/* 项目7 */}
-                <div style={{ display: value === 6 ? '' : 'none' }}>
-                    <PreviewTag id="right73">
-                        <img src={board73} alt="集团介绍71" style={{width: '17.6vw'}} />
-                    </PreviewTag>
-                    <PreviewTag id="right74">
-                        <img src={board74} alt="将军医院" style={{width: '17.6vw'}} />
-                    </PreviewTag>
-                </div>
-                {/* 项目5 */}
-                <div style={{ display: value === 7 ? '' : 'none' }}>
-                    <PreviewTag id="right82">
-                        <img src={board82} alt="深圳中学" style={{width: '17.6vw'}} />
+                        <img src={board5_2} alt="将军澳医院" style={{width: '17.6vw'}} />
                     </PreviewTag>
                 </div>
             </Panel>
