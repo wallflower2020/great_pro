@@ -3,9 +3,11 @@ import style from './style.module.css'
 import { Translate } from '../../../components/Translate'
 import active from '../../groupIntro/sevenSeries/image/active.png'
 import normal from '../../groupIntro/sevenSeries/image/normal.png'
-import { callUe4ByMenu } from '../../../util/ue'
+import { callUe4ByMenu, getUe4Interface } from '../../../util/ue'
 
 const Facilities: React.FC<any> = () => {
+    const [show, setShow] = useState(false)
+
     useEffect(() => {
         callUe4ByMenu({
             key: 'A2B2C1商业',
@@ -15,6 +17,12 @@ const Facilities: React.FC<any> = () => {
             }
         })
     }, [])
+
+    getUe4Interface().Process = (param: any) => {
+        if(param === 'DZH') {
+            setShow(true)
+        }
+    }
 
     const [value, setValue] = useState(0)
     const Facility = [
@@ -67,6 +75,12 @@ const Facilities: React.FC<any> = () => {
                     )
                 })
             }
+            <div className={style.show} style={{ display: show? '' : 'none' }}>
+                <div className={style.mask} onClick={() => setShow(false)}/> 
+                <div className={style.video}>
+                    <iframe src="https://www.720yun.com/t/79dj5rtmrk0?scene_id=10052059" width="100%" height="100%" ></iframe>
+                </div>
+            </div>
         </div>
     )
 }

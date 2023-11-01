@@ -22,3 +22,29 @@
     font-size: 0.75rem;
     line-height: 2.5vh;
 }
+
+.show {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.mask {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 990;
+    background-color: #333333;
+    opacity: 0.3;
+}
+
+.video {
+    position: absolute;
+    width: 60vw;
+    height: 60vh;
+    left: 20vw;
+    top: 20vh;
+    z-index: 999;
+}
