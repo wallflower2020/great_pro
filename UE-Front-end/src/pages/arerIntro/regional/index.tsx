@@ -7,6 +7,7 @@ import { callUe4ByMenu, getUe4Interface } from '../../../util/ue'
 
 const Regional: React.FC<any> = () => {
     const [show, setShow] = useState(false)
+    const [url, setUrl] = useState("https://www.720yun.com/t/79dj5rtmrk0?scene_id=10052059")
 
     useEffect(() => {
         callUe4ByMenu({
@@ -16,18 +17,21 @@ const Regional: React.FC<any> = () => {
                 Menu: 'A2B2C1'
             }
         })
-
-        const iframe = document.querySelector("iframe")
-        if(iframe) {
-            const audio = iframe.contentDocument?.querySelector("audio")
-            audio&&audio?.muted
-        }
     }, [])
 
     getUe4Interface().Process = (param: any) => {
         if(param === 'DZH') {
+            setUrl("https://www.720yun.com/t/79dj5rtmrk0?scene_id=10052059")
             setShow(true)
         }
+    }
+
+    const turnDown = () => {
+        const iframe = document.querySelector("iframe")
+        iframe?.remove
+
+        setShow(false)
+        setUrl("")
     }
 
     const [value, setValue] = useState(0)
@@ -70,6 +74,11 @@ const Regional: React.FC<any> = () => {
         })
     }
 
+    const test = () => {
+        setUrl("https://www.720yun.com/t/79dj5rtmrk0?scene_id=10052059")
+        setShow(true)
+    }
+
     return (
         <div className={style.facility}>
             {
@@ -82,11 +91,12 @@ const Regional: React.FC<any> = () => {
                 })
             }
             <div className={style.show} style={{ display: show? '' : 'none' }}>
-                <div className={style.mask} onClick={() => setShow(false)}/> 
+                <div className={style.mask} onClick={() => turnDown()}/> 
                 <div className={style.video}>
-                    <iframe src="https://www.720yun.com/t/79dj5rtmrk0?scene_id=10052059"  width="100%" height="100%" ></iframe>
+                    <iframe src={url}  width="100%" height="100%" ></iframe>
                 </div>
             </div>
+            <div style={{ position: 'fixed', right: '10vw', bottom: '10vh', color: 'red'}} onClick={() => test()}>123123</div>
         </div>
     )
 }
