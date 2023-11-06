@@ -23,7 +23,7 @@ const zhHK: any = {
     sSeries: 'S系列',
     tSeries: 'T系列',
     wSeries: 'W系列',
-    regional: '區域劃分',
+    regional: '配套設施',
     facilities: '福田區介紹',
     bonded: '福田保稅區',
     business: '商業',
