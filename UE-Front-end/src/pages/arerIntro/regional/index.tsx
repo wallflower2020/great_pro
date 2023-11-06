@@ -17,10 +17,11 @@ const Regional: React.FC<any> = () => {
             }
         })
 
-        // const Id = document.getElementById("iframeId")
-        // if(Id) {
-        //     Id.muted = true
-        // }
+        const iframe = document.querySelector("iframe")
+        if(iframe) {
+            const audio = iframe.contentDocument?.querySelector("audio")
+            audio&&audio?.muted
+        }
     }, [])
 
     getUe4Interface().Process = (param: any) => {
@@ -83,7 +84,7 @@ const Regional: React.FC<any> = () => {
             <div className={style.show} style={{ display: show? '' : 'none' }}>
                 <div className={style.mask} onClick={() => setShow(false)}/> 
                 <div className={style.video}>
-                    <iframe src="https://www.720yun.com/t/79dj5rtmrk0?scene_id=10052059"  width="100%" height="100%" id="iframeId" ></iframe>
+                    <iframe src="https://www.720yun.com/t/79dj5rtmrk0?scene_id=10052059"  width="100%" height="100%" ></iframe>
                 </div>
             </div>
         </div>
