@@ -5,7 +5,7 @@ const ArerIntro: React.FC = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        navigate('/arerIntro/regional')
+        navigate('/arerIntro/facilities')
     }, [])
 
     return (
