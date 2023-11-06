@@ -12,7 +12,7 @@ import style from "./style.module.css"
 const Environment: React.FC = () => {
     return (
         <div className={style.box}>
-            <Carousel autoplay>
+            <Carousel autoplay arrows={true}>
                 <div><img src={en1} className={style.img} /></div>
                 <div><img src={en2} className={style.img} /></div>
                 <div><img src={en3} className={style.img} /></div>
