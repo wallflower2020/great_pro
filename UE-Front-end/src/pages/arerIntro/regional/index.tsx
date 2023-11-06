@@ -11,10 +11,10 @@ const Regional: React.FC<any> = () => {
 
     useEffect(() => {
         callUe4ByMenu({
-            key: 'A2B2C1商业',
+            key: 'A2B1C1商业',
             cn: '商业',
             parameters: {
-                Menu: 'A2B2C1'
+                Menu: 'A2B1C1'
             }
         })
     }, [])
@@ -34,27 +34,27 @@ const Regional: React.FC<any> = () => {
     const [value, setValue] = useState(0)
     const Facility = [
         {
-            menu: 'A2B2C1',
+            menu: 'A2B1C1',
             name: '商业',
             inter: 'business'
         }, {
-            menu: 'A2B2C2',
+            menu: 'A2B1C2',
             name: '教育',
             inter: 'education'
         }, {
-            menu: 'A2B2C3',
+            menu: 'A2B1C3',
             name: '医疗',
             inter: 'medical'
         }, {
-            menu: 'A2B2C4',
+            menu: 'A2B1C4',
             name: '文化',
             inter: 'recreation'
         }, {
-            menu: 'A2B2C5',
+            menu: 'A2B1C5',
             name: '景观',
             inter: 'landscape'
         }, {
-            menu: 'A2B2C6',
+            menu: 'A2B1C6',
             name: '交通',
             inter: 'traffic'
         }

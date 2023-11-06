@@ -30,7 +30,7 @@ const SecondaryA2: React.FC = () => {
             path: '/arerIntro/bonded'
         }, {
             menu: 'A2B1',
-            name: '区域划分',
+            name: '配套设施',
             inter: 'regional',
             path: '/arerIntro/regional'
         },
