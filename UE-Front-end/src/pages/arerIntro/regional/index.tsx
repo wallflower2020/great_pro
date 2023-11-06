@@ -74,11 +74,6 @@ const Regional: React.FC<any> = () => {
         })
     }
 
-    const test = () => {
-        setUrl("https://www.720yun.com/t/79dj5rtmrk0?scene_id=10052059")
-        setShow(true)
-    }
-
     return (
         <div className={style.facility}>
             {
@@ -96,7 +91,6 @@ const Regional: React.FC<any> = () => {
                     <iframe src={url}  width="100%" height="100%" ></iframe>
                 </div>
             </div>
-            <div style={{ position: 'fixed', right: '10vw', bottom: '10vh', color: 'red'}} onClick={() => test()}>123123</div>
         </div>
     )
 }
