@@ -13,6 +13,22 @@ const SecondaryA1: React.FC = () => {
     const [flag, setFlag] = useState(-1)
     const navigate = useNavigate()
 
+    
+    // 前端遥控通信逻辑（填写ws服务监听端口）
+
+    // useEffect(() => {
+    //     const socket = new WebSocket('ws://localhost:8848'); 
+
+    //     socket.addEventListener('open', (event) => {
+    //         console.log('已经连接成功')
+    //     })
+
+    //     socket.addEventListener('message', (event) => {
+    //         console.log('收到消息:', event)
+    //         setFlag(0)
+    //     })
+    // })
+
     let auto: any = null
 
     const funcA = () => {

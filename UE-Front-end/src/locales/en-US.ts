@@ -25,6 +25,7 @@ const enUS: any = {
     wSeries: 'W Series',
     regional: 'Regional Division',
     facilities: 'Supporting Facilities',
+    bonded: 'Bonded Area',
     business: 'business',
     education: 'education',
     medical: 'medical',

@@ -19,16 +19,21 @@ const SecondaryA2: React.FC = () => {
     const [value, setValue] = useState(0)
     const Parts:Array<PartsProps> = [
         {
+            menu: 'A2B2',
+            name: '福田区介绍',
+            inter: 'facilities',
+            path: '/arerIntro/facilities'
+        }, {
+            menu: 'A2B3',
+            name: '福田保税区',
+            inter: 'bonded',
+            path: '/arerIntro/bonded'
+        }, {
             menu: 'A2B1',
             name: '区域划分',
             inter: 'regional',
             path: '/arerIntro/regional'
-        }, {
-            menu: 'A2B2',
-            name: '配套设施',
-            inter: 'facilities',
-            path: '/arerIntro/facilities'
-        }
+        },
     ]
 
 

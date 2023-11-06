@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Panel } from "../../../components/Panel";
 import { PreviewTag } from "../../../components/PreviewTag";
 import board1_1 from './image/A1B5_1_L_1.png'
-import board1_2 from './image/A1B5_1_L_2.png'
-import board1_3 from './image/A1B5_1_L_3.png'
-import board1_4 from './image/A1B5_1_L_4.png'
+// import board1_2 from './image/A1B5_1_L_2.png'
+// import board1_3 from './image/A1B5_1_L_3.png'
+// import board1_4 from './image/A1B5_1_L_4.png'
 import board2_1 from './image/A1B5_2_L_1.png'
 import board3_1 from './image/A1B5_3_L_1.png'
 import board4_1 from './image/A1B5_4_L_1.png'
@@ -14,9 +14,9 @@ import board2_2 from './image/A1B5_2_R_1.png'
 import board3_2 from './image/A1B5_3_R_1.png'
 import board4_2 from './image/A1B5_4_R_1.png'
 import board5_2 from './image/A1B5_5_R_1.png'
-import board1_6 from './image/A1B5_1_R_2.png'
-import board1_7 from './image/A1B5_1_R_3.png'
-import board1_8 from './image/A1B5_1_R_4.png'
+// import board1_6 from './image/A1B5_1_R_2.png'
+// import board1_7 from './image/A1B5_1_R_3.png'
+// import board1_8 from './image/A1B5_1_R_4.png'
 import style from './style.module.css'
 import Title from "../../../components/Title";
 import { getUe4Interface } from "../../../util/ue";

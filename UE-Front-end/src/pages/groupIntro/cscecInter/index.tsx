@@ -14,7 +14,7 @@ import { getUe4Interface } from '../../../util/ue'
 
 const cscecInter: React.FC = () => {
 
-    const Board:Array<string> = [board2, board3, board4, board5, board6, board7, board8]
+    const Board: Array<string> = [board2, board3, board4, board5, board6, board7, board8]
 
     const [value, setValue] = useState(-1)
     getUe4Interface().Introduce = (param: any) => {
@@ -29,22 +29,22 @@ const cscecInter: React.FC = () => {
 
     return (
         <div>
-            <Title id='cscecInternational' en='CSCEC INTERNATIONAL'/>
+            <Title id='cscecInternational' en='CSCEC INTERNATIONAL' />
             <Panel position='left'>
-                <div style={{marginTop: '19vh'}}>
+                <div style={{ marginTop: '19vh' }}>
                     <PreviewTag id='left1'>
-                        <img src={board1} alt='集团介绍' style={{ width: '17.6vw' }} onClick={() => changeImg(1)}/>
+                        <img src={board1} alt='集团介绍' style={{ width: '17.6vw' }} onClick={() => changeImg(1)} />
                     </PreviewTag>
                 </div>
             </Panel>
             {/** 图片判断改为循环调用panel组件，实现切换后panel组件重新渲染展示缩放效果 */}
             {
                 Board.map((board, index) => {
-                    return(
+                    return (
                         <Panel position='right' style={{ display: value === index ? '' : 'none' }} key={index}>
-                            <div style={{marginTop: '8.5vh'}}>
+                            <div style={{ marginTop: '8.5vh' }}>
                                 <PreviewTag id={`right${index}`}>
-                                    <img src={board} alt={board} style={{ width: '18vw' }}/>
+                                    <img src={board} alt={board} style={{ width: '18vw' }} />
                                 </PreviewTag>
                             </div>
                         </Panel>
