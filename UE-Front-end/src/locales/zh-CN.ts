@@ -4,6 +4,8 @@ const zhCN: any = {
     companyIntroduction: '公 司 介 绍',
     cscecInternational: '中 国 建 筑 国 际 集 团',
     cscHailong: '中 建 海 龙',
+    futianDistrict: '福 田 区 概 况',
+    futianFreeTradeZone: '福 田 保 税 区 概 况',
     A1B1: '中 建 国 际 介 绍',
     A1B3: '中 建 海 龙 介 绍',
     A1B2: '国 内 布 局',

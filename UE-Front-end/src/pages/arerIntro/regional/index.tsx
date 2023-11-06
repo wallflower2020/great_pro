@@ -27,9 +27,6 @@ const Regional: React.FC<any> = () => {
     }
 
     const turnDown = () => {
-        const iframe = document.querySelector("iframe")
-        iframe?.remove
-
         setShow(false)
         setUrl("")
     }

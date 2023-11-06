@@ -4,6 +4,8 @@ const enUS: any = {
     companyIntroduction: 'Company Intro',
     cscecInternational: 'CSCEC INTERNATIONAL',
     cscHailong: 'CSC HAILONG',
+    futianDistrict: 'OVERVIEW of FUTIAN DISTRICT',
+    futianFreeTradeZone: 'OVERVIEW of FUTIAN FREE TRADE ZONE',
     A1B1: 'CSCEC Intro',
     A1B3: 'CSCHL Intro',
     A1B2: 'Domestic Layout',
