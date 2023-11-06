@@ -10,9 +10,9 @@ import { TransButton } from "../Translate/TransButton";
 import { Weather } from "../Weather";
 import { Timeline } from "../Timeline";
 import { callUe4ByTitle } from '../../util/ue'
+import { Popconfirm } from 'antd';
 
 const Head: React.FC = () => {
-
     const closes = () => {
         callUe4ByTitle({
             key: 'quit',
@@ -22,6 +22,7 @@ const Head: React.FC = () => {
             }
         })
     }
+
     return <>
         <div className={style.head}>
             <img alt="logo" src={logo} className={style.logo} />
@@ -40,9 +41,17 @@ const Head: React.FC = () => {
                 <div className={style.funcbox}>
                     <img alt="sound" src={sound} style={{ width: '1.1vw' }} />
                 </div>
-                <div className={style.funcbox} onClick={() => closes()}>
-                    <img alt="close" src={close} style={{ width: '1.1vw' }} />
-                </div>
+                <Popconfirm
+                    placement="leftTop"
+                    title="确认要关闭项目吗？"
+                    okText="确认"
+                    cancelText="取消"
+                    onConfirm={() => closes()}
+                >
+                    <div className={style.funcbox}>
+                        <img alt="close" src={close} style={{ width: '1.1vw' }} />
+                    </div>
+                </Popconfirm>
                 <div style={{ width: '0.2vw' }} />
             </div>
         </div>
