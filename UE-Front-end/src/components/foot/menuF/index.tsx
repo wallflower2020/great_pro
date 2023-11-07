@@ -48,6 +48,21 @@ const MenuF: React.FC<any> = () => {
         navigate(param.path)
     }
 
+    const socket = new WebSocket('ws://localhost:8848'); 
+
+    socket.addEventListener('open', (event) => {
+        console.log('已经连接成功')
+    })
+
+    socket.addEventListener('message', (event) => {
+        console.log('收到消息:', event)
+        if(event.data === '7') {
+            handleClick(menus[2])
+        } else if(event.data === '8') {
+            handleClick(menus[0])
+        }
+    })
+
     const changeColor = (e: any) => {
         if(curr !== Number(e.target.alt)) {
             e.target.src = menuB[Number(e.target.alt) * 2 + 1]

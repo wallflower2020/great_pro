@@ -48,3 +48,10 @@
     top: 20vh;
     z-index: 999;
 }
+
+.traffic {
+    width: 16.4vw;
+    position: absolute;
+    left: 8vw;
+    bottom: -6vh;
+}

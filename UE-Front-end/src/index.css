@@ -101,3 +101,55 @@ button:focus-visible {
 .ant-tooltip .ant-tooltip-arrow {
   display: none;
 }
+
+.ant-carousel .slick-next {
+  height: 3.4vh;
+  background-image: url("./assets/image/right.png");
+  background-size: 100% 100%;
+  right: 2.2vw;
+  z-index: 99;
+}
+
+.ant-carousel .slick-prev {
+  height: 3.4vh;
+  background-image: url("./assets/image/left.png");
+  background-size: 100% 100%;
+  left: 2.2vw;
+  z-index: 99;
+}
+
+.ant-carousel .slick-next:hover {
+  height: 3.4vh;
+  background-image: url("./assets/image/right.png");
+  background-size: 100% 100%;
+  right: 2.2vw;
+  z-index: 99;
+}
+
+.ant-carousel .slick-prev:hover {
+  height: 3.4vh;
+  background-image: url("./assets/image/left.png");
+  background-size: 100% 100%;
+  left: 2.2vw;
+  z-index: 99;
+}
+
+.ant-carousel .slick-next:focus {
+  height: 3.4vh;
+  background-image: url("./assets/image/right.png");
+  background-size: 100% 100%;
+  right: 2.2vw;
+  z-index: 99;
+}
+
+.ant-carousel .slick-prev:focus {
+  height: 3.4vh;
+  background-image: url("./assets/image/left.png");
+  background-size: 100% 100%;
+  left: 2.2vw;
+  z-index: 99;
+}
+
+.ant-carousel .slick-dots {
+  margin: 10px;
+}

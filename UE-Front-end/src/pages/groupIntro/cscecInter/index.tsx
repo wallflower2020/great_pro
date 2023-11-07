@@ -31,7 +31,7 @@ const cscecInter: React.FC = () => {
         <div>
             <Title id='cscecInternational' en='CSCEC INTERNATIONAL' />
             <Panel position='left'>
-                <div style={{ marginTop: '19vh' }}>
+                <div style={{ marginTop: '16vh' }}>
                     <PreviewTag id='left1'>
                         <img src={board1} alt='集团介绍' style={{ width: '17.6vw' }}/>
                     </PreviewTag>

@@ -10,24 +10,33 @@ import { menus } from '../../menus'
 
 const SecondaryA1: React.FC = () => {
     const [value, setValue] = useState(0)
-    const [flag, setFlag] = useState(-1)
+    const [flag, setFlag] = useState(-2)
+    const [ddd, setDdd] = useState(false)
     const navigate = useNavigate()
 
     
     // 前端遥控通信逻辑（填写ws服务监听端口）
 
-    // useEffect(() => {
-    //     const socket = new WebSocket('ws://localhost:8848'); 
+    useEffect(() => {
+        const socket = new WebSocket('ws://localhost:8848'); 
 
-    //     socket.addEventListener('open', (event) => {
-    //         console.log('已经连接成功')
-    //     })
+        socket.addEventListener('open', (event) => {
+            console.log('已经连接成功')
+        })
 
-    //     socket.addEventListener('message', (event) => {
-    //         console.log('收到消息:', event)
-    //         setFlag(0)
-    //     })
-    // })
+        socket.addEventListener('message', (event) => {
+            console.log('收到消息:', event)
+            if(event.data === '1') {
+                setFlag(-1)
+            } else if(event.data === '2') {
+                funcB()
+            } else if(event.data === '3') {
+                setDdd(true)
+            } else if(event.data === '4') {
+                setDdd(false)
+            }
+        })
+    })
 
     let auto: any = null
 
@@ -43,22 +52,14 @@ const SecondaryA1: React.FC = () => {
     }
 
     useEffect(() => {
-        if(flag > -1) {
+        if(flag > -2) {
             if(flag === 4) {
-                setFlag(0)
+                setFlag(-1)
             } else { 
                 funcA()
             }
         }
     }, [flag])
-
-    getUe4Interface().change = () => {
-        setFlag(0)
-    }
-
-    getUe4Interface().stop = () => {
-        funcB()
-    }
 
     const props = {
         max: 4,
@@ -104,7 +105,8 @@ const SecondaryA1: React.FC = () => {
     }
 
     return (
-        <div className={style.slider}>
+        <div>
+            <div className={style.slider}>
             <Slider {...props} value={value} onChange={changeSlider}
                 railStyle={{ backgroundColor: 'rgba(0,0,0,0)', height: '2vh' }}
                 trackStyle={{ backgroundColor: 'rgba(0,0,0,0)', height: '2vh' }}
@@ -124,6 +126,8 @@ const SecondaryA1: React.FC = () => {
             <img src={slider} className={style.sliderImg} />
             <div className={style.turn} style={{ left: '-1vw' }} onClick={turnLeft} />
             <div className={style.turn} style={{ right: '-1vw' }} onClick={turnRight} />
+        </div>
+            <div style={{ display: ddd ? 'flex' : 'none', position: 'fixed', top: '-70vh', left: '-5vw', width: '40vw', height: '40vh', backgroundColor: 'rgba(0,0,0,0.5)', alignItems: 'center', justifyContent: 'center', fontSize: '5rem', color: 'white'}}>这是一个弹出框</div>
         </div>
     )
 }
