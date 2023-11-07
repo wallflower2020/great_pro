@@ -15,7 +15,7 @@ const Environment: React.FC = () => {
     return (
         <div className={style.box} style={{ display: show? '' : 'none'}}>
             <img src={close} className={style.close} onClick={() => setShow(false)}/>
-            <Carousel arrows={true}>
+            <Carousel autoplay arrows={true}>
                 <div><img src={en1} className={style.img} /></div>
                 <div><img src={en2} className={style.img} /></div>
                 <div><img src={en3} className={style.img} /></div>

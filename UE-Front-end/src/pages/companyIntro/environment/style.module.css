@@ -1,22 +1,22 @@
 .img {
     width: 52vw;
-    height: 42vh;
+    height: 60vh;
 }
 
 .box {
     width: 52vw;
-    height: 42vh;
+    height: 60vh;
     /* background-color: aqua; */
     position: absolute;
     left: 24vw;
-    top: 29vh;
+    top: 20vh;
     z-index: 999;
 }
 
 .close {
     position: absolute;
     z-index: 99;
-    right: 2vw;
-    top: 3.6vh;
+    right: 2.4vw;
+    top: 5.8vh;
     height: 2.2vh;
 }

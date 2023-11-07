@@ -5,10 +5,9 @@ import active from '../../groupIntro/sevenSeries/image/active.png'
 import normal from '../../groupIntro/sevenSeries/image/normal.png'
 import { callUe4ByMenu, getUe4Interface } from '../../../util/ue'
 import traffic from './image/traffic/traffic.png'
+import { Panel } from '../../../components/Panel'
 
 const Regional: React.FC<any> = () => {
-    const [show, setShow] = useState(false)
-    const [url, setUrl] = useState("https://www.720yun.com/t/79dj5rtmrk0?scene_id=10052059")
     const [value, setValue] = useState(0)
 
     useEffect(() => {
@@ -20,18 +19,6 @@ const Regional: React.FC<any> = () => {
             }
         })
     }, [])
-
-    getUe4Interface().Process = (param: any) => {
-        if(param === 'DZH') {
-            setUrl("https://www.720yun.com/t/79dj5rtmrk0?scene_id=10052059")
-            setShow(true)
-        }
-    }
-
-    const turnDown = () => {
-        setShow(false)
-        setUrl("")
-    }
 
     const Facility = [
         {
@@ -73,23 +60,22 @@ const Regional: React.FC<any> = () => {
     }
 
     return (
-        <div className={style.facility}>
-            {
-                Facility.map((item, index) => {
-                    return (
-                        <div className={style.sbutton} key={index} onClick={() => changeFacility(item, index)} style={{ backgroundImage: value === index ? `url(${active})` : `url(${normal})` }}>
-                            <Translate id={item.inter} />
-                        </div>
-                    )
-                })
-            }
-            <div className={style.show} style={{ display: show? '' : 'none' }}>
-                <div className={style.mask} onClick={() => turnDown()}/> 
-                <div className={style.video}>
-                    <iframe src={url}  width="100%" height="100%" ></iframe>
-                </div>
+        <div>
+            <div className={style.facility}>
+                {
+                    Facility.map((item, index) => {
+                        return (
+                            <div className={style.sbutton} key={index} onClick={() => changeFacility(item, index)} style={{ backgroundImage: value === index ? `url(${active})` : `url(${normal})` }}>
+                                <Translate id={item.inter} />
+                            </div>
+                        )
+                    })
+                }
+                <img src={traffic} className={style.traffic} style={{ display: (value === 5)? '' : 'none'}} />
             </div>
-            <img src={traffic} className={style.traffic} style={{ display: (value === 5)? '' : 'none'}} />
+            <Panel position='left'>
+                
+            </Panel>
         </div>
     )
 }
