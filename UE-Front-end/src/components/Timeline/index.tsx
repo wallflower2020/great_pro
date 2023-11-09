@@ -3,8 +3,7 @@ import timeline from '../../assets/image/timeline.png'
 import circle from '../../assets/image/circle1.png'
 import style from './style.module.css'
 import { Slider } from 'antd'
-import { callUe4ByTitle, getUe4Interface, callUe4ByMenu } from '../../util/ue'
-import { useNavigate } from 'react-router'
+import { callUe4ByTitle, getUe4Interface } from '../../util/ue'
 
 /**
  * 
@@ -13,7 +12,6 @@ import { useNavigate } from 'react-router'
  */
 export const Timeline: React.FC = () => {
     const [time, setTime] = useState(56)
-    const navigate = useNavigate()
 
     getUe4Interface().SetWebTime = (param: string) => {
         setTime(Number(param) * 4)
@@ -27,7 +25,7 @@ export const Timeline: React.FC = () => {
     const socket = new WebSocket('ws://localhost:8848'); 
 
     socket.addEventListener('open', (event) => {
-        console.log('已经连接成功')
+        console.log('已经连接成功', event)
     })
 
     socket.addEventListener('message', (event) => {

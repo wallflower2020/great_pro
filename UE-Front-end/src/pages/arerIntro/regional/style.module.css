@@ -52,6 +52,16 @@
 .traffic {
     width: 16.4vw;
     position: absolute;
-    left: 8vw;
+    left: -73vw;
     bottom: -1vh;
+}
+
+.leftitem {
+    margin-top: 120%;
+    transform: translateY(-50%);
+}
+
+.rightitem {
+    margin-top: 120%;
+    transform: translateY(-50%);
 }

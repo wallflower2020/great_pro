@@ -3,7 +3,7 @@ import style from './style.module.css'
 import { Slider } from 'antd'
 import slider from '../../../../../assets/image/slider.png'
 import vernier from '../../../../../assets/image/vernier.png'
-import { callUe4ByMenu, getUe4Interface } from '../../../../../util/ue'
+import { callUe4ByMenu } from '../../../../../util/ue'
 import { Translate } from '../../../../Translate'
 import { useNavigate } from 'react-router'
 import { menus } from '../../menus'
@@ -21,7 +21,7 @@ const SecondaryA1: React.FC = () => {
         const socket = new WebSocket('ws://localhost:8848'); 
 
         socket.addEventListener('open', (event) => {
-            console.log('已经连接成功')
+            console.log('已经连接成功', event)
         })
 
         socket.addEventListener('message', (event) => {

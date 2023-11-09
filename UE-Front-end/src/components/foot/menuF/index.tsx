@@ -51,7 +51,7 @@ const MenuF: React.FC<any> = () => {
     const socket = new WebSocket('ws://localhost:8848'); 
 
     socket.addEventListener('open', (event) => {
-        console.log('已经连接成功')
+        console.log('已经连接成功', event)
     })
 
     socket.addEventListener('message', (event) => {
