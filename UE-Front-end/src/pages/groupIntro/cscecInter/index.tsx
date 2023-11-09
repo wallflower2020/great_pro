@@ -22,7 +22,7 @@ const cscecInter: React.FC = () => {
     }
 
     const changeImg = (param: number) => {
-        if (param < 8 && param > 0) {
+        if (param < 8 && param > -1) {
             setValue(param - 1)
         }
     }

@@ -50,7 +50,7 @@ import { PreviewTag } from '../../../components/PreviewTag'
 
 const Regional: React.FC<any> = () => {
     const [value, setValue] = useState(0)
-    const [curr, setCurr] = useState(0)
+    const [curr, setCurr] = useState(-1)
     const board: Array<string> = [board1, board2, board3, board4, board5, board6]
     const intro: Array<Array<string>> = [
         [board11, board12, board13, board14, board15, board16],
@@ -70,10 +70,12 @@ const Regional: React.FC<any> = () => {
         })
     }, [])
 
-    getUe4Interface().Lable = (param: any) => {
+    getUe4Interface().Label = (param: any) => {
         const current = Number(param.slice(-1)) - 1
         setCurr(current)
     }
+
+
 
     const Facility = [
         {
@@ -104,6 +106,7 @@ const Regional: React.FC<any> = () => {
     ]
 
     const changeFacility = (e: any, i: any) => {
+        setCurr(-1)
         setValue(i)
         callUe4ByMenu({
             key: e.menu + e.name,
