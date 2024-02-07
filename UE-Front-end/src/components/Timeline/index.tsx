@@ -22,20 +22,20 @@ export const Timeline: React.FC = () => {
         max: 96
     }
 
-    const socket = new WebSocket('ws://localhost:8848'); 
+    // const socket = new WebSocket('ws://localhost:8848'); 
 
-    socket.addEventListener('open', (event) => {
-        console.log('已经连接成功', event)
-    })
+    // socket.addEventListener('open', (event) => {
+    //     console.log('已经连接成功', event)
+    // })
 
-    socket.addEventListener('message', (event) => {
-        console.log('收到消息:', event)
-        if(event.data === '5') {
-            changeTime(time + 10)
-        } else if(event.data === '6') {
-            changeTime(time - 10)
-        }
-    })
+    // socket.addEventListener('message', (event) => {
+    //     console.log('收到消息:', event)
+    //     if(event.data === '5') {
+    //         changeTime(time + 10)
+    //     } else if(event.data === '6') {
+    //         changeTime(time - 10)
+    //     }
+    // })
 
     const changeTime = (e: number) => {
         callUe4ByTitle({

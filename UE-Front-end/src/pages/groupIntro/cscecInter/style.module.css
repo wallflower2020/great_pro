@@ -1,0 +1,95 @@
+.roamarea {
+    width: 100vw;
+    height: 20vh;
+    /* background-color: bisque; */
+    position: fixed;
+    bottom: 0;
+}
+
+.roamboxup {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40vw;
+    height: 16vh;
+    /* background-color: aqua; */
+    animation: boxup 1s ease 0s 1 normal;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@keyframes boxup {
+    from {
+        top: 25vh;
+    }
+
+    to {
+        top: 0;
+    }
+}
+
+.roamboxdown {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40vw;
+    height: 16vh;
+    top: 25vh;
+    /* background-color: aqua; */
+    animation: boxdown 1s ease-in-out 0s 1 normal;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@keyframes boxdown {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: 25vh;
+    }
+}
+
+.roambox {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40vw;
+    height: 16vh;
+    top: 25vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.roamitem {
+    background-color: rgba(0, 0, 0, 1);
+    width: 10vw;
+    height: 16vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+
+.testback {
+    background-image: url('../../../assets/testImg/testback.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}

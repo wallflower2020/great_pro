@@ -1,56 +1,34 @@
 import React, { useState } from 'react'
-import { Panel } from '../../../components/Panel'
-import board1 from '../../../assets/image/board1.png'
-import board2 from '../../../assets/image/board2.png'
-import board3 from '../../../assets/image/board3.png'
-import board4 from '../../../assets/image/board4.png'
-import board5 from '../../../assets/image/board5.png'
-import board6 from '../../../assets/image/board6.png'
-import board7 from '../../../assets/image/board7.png'
-import board8 from '../../../assets/image/board8.png'
-import { PreviewTag } from '../../../components/PreviewTag'
-import Title from '../../../components/Title'
-import { getUe4Interface } from '../../../util/ue'
+import style from './style.module.css'
 
 const cscecInter: React.FC = () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [show, setShow] = useState(0)
 
-    const Board: Array<string> = [board2, board3, board4, board5, board6, board7, board8]
-
-    const [value, setValue] = useState(-1)
-    getUe4Interface().Introduce = (param: any) => {
-        changeImg(Number(param))
-    }
-
-    const changeImg = (param: number) => {
-        if (param < 8 && param > -1) {
-            setValue(param - 1)
-        }
-    }
+    const roamItem = [{
+        name: '漫游1',
+        color: 'white'
+    }, {
+        name: '漫游2',
+        color: 'white'
+    }, {
+        name: '漫游3',
+        color: 'white'
+    }]
 
     return (
-        <div>
-            <Title id='cscecInternational' en='CSCEC INTERNATIONAL' />
-            <Panel position='left'>
-                <div style={{ marginTop: '16vh' }}>
-                    <PreviewTag id='left1'>
-                        <img src={board1} alt='集团介绍' style={{ width: '17.6vw' }}/>
-                    </PreviewTag>
-                </div>
-            </Panel>
-            {/** 图片判断改为循环调用panel组件，实现切换后panel组件重新渲染展示缩放效果 */}
-            {
-                Board.map((board, index) => {
-                    return (
-                        <Panel position='right' style={{ display: value === index ? '' : 'none' }} key={index}>
-                            <div style={{ marginTop: '8.5vh' }}>
-                                <PreviewTag id={`right${index}`}>
-                                    <img src={board} alt={board} style={{ width: '18vw' }} />
-                                </PreviewTag>
+        <div className={style.roamarea}  onMouseOver={() => setShow(1)} onMouseOut={() => setShow(2)}>
+            <div className={(show === 1) ? style.roamboxup : (show === 2) ? style.roamboxdown : style.roambox }>
+                {
+                    roamItem.map((item, index) => {
+                        return (
+                            <div key={index} className={style.roamitem} style={{ color: item.color }}>
+                                {item.name}
                             </div>
-                        </Panel>
-                    )
-                })
-            }
+                        )
+                    })
+                }
+            </div>
         </div>
     )
 }

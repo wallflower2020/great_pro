@@ -1,0 +1,76 @@
+.maskbox {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.mask {
+    width: 120vw;
+    height: 120vh;
+    position: absolute;
+    top: -10vh;
+    left: -10vw;
+    z-index: 2;
+    background-image: url('../../assets/image/usermask.png');
+    background-repeat: no-repeat;
+    background-size: 120vw 120vh;
+    backdrop-filter: blur(10px);
+}
+
+.testback {
+    background-image: url('../../assets/testImg/testback.png');
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.loginbox {
+    position: absolute;
+    z-index: 3;
+    top: 0vh;
+    left: 30vw;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chartbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    padding: 5vh 0;
+}
+
+.inputbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15vh;
+    color: aliceblue;
+    /* margin-top: -12vh; */
+    width: 20vw;
+}
+
+.loginbutton {
+    margin-left: auto;
+}
+
+.close {
+    position: fixed;
+    bottom: 5vh;
+    right: 5vw;
+    z-index: 100;
+}
