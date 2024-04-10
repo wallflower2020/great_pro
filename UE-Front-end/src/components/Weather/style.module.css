@@ -8,7 +8,7 @@
 }
 
 .funcbox:hover {
-    background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, #13769F 100%);
+    background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, #FFFFEF 100%);
     border-radius: 0.2vw;
 }
 

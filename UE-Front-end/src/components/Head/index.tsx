@@ -126,6 +126,9 @@ const Head: React.FC = () => {
 
     return <>
         <div className={style.head}>
+            <div>
+            
+            </div>
             {/* <img alt="logo" src={logo} className={style.logo} /> */}
             {/* <img alt="cut" src={cut} className={style.cut} /> */}
             {/* <div className={style.clock}>
@@ -136,13 +139,13 @@ const Head: React.FC = () => {
                 <div className={style.funcbox} onClick={() => goHome()}>
                     <img alt="home" src={home} style={{ width: '1.1vw' }} />
                 </div>
-                <div className={style.funcbox} style={{ background: round? 'linear-gradient(180deg, rgba(255,255,255,0.8) 0%, #13769F 100%)' : '', borderRadius: '0.2vw' }} onClick={() => changeRound()}>
+                <div className={style.funcbox} style={{ background: round? 'linear-gradient(180deg, rgba(255,255,255,0.8) 0%, #FFFFEF 100%)' : '', borderRadius: '0.2vw' }} onClick={() => changeRound()}>
                     <img alt="round" src={around} style={{ width: '1.1vw' }} />
                 </div>
-                <div className={style.funcbox} style={{ background: cuts? 'linear-gradient(180deg, rgba(255,255,255,0.8) 0%, #13769F 100%)' : '', borderRadius: '0.2vw' }} onClick={() => changeCut()}>
+                <div className={style.funcbox} style={{ background: cuts? 'linear-gradient(180deg, rgba(255,255,255,0.8) 0%, #FFFFEF 100%)' : '', borderRadius: '0.2vw' }} onClick={() => changeCut()}>
                     <img alt="cuts" src={cut} style={{ width: '1.1vw' }} />
                 </div>
-                <div className={style.funcbox} style={{ background: draws? 'linear-gradient(180deg, rgba(255,255,255,0.8) 0%, #13769F 100%)' : '', borderRadius: '0.2vw' }} onClick={() => changeDraw()}>
+                <div className={style.funcbox} style={{ background: draws? 'linear-gradient(180deg, rgba(255,255,255,0.8) 0%, #FFFFEF 100%)' : '', borderRadius: '0.2vw' }} onClick={() => changeDraw()}>
                     <img alt="draw" src={draw} style={{ width: '1.1vw' }} />
                 </div>
                 <TransButton />
