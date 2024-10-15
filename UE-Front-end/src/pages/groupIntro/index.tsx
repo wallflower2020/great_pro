@@ -9,11 +9,14 @@ import Login from './Login';
 import close from '../../assets/image/close.png'
 import { Popconfirm } from 'antd';
 import { callUe4ByTitle } from '../../util/ue'
+// import { useNavigate } from 'react-router';
 
 
 const GroupIntro: React.FC = () => {
+    // const navigate = useNavigate()
 
     useEffect(() => {
+        // navigate('/groupIntro/test')
         // navigate('/groupIntro/cscecInter')
     }, [])
 

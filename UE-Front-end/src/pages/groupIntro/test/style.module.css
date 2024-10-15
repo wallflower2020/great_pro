@@ -1,0 +1,106 @@
+.top {
+    width: 100vw;
+    height: 6vh;
+    background: linear-gradient(180deg, #347CAF 0%, #B4FDFF 100%);
+    justify-content: space-between;
+    display: flex;
+}
+
+.menulist {
+    display: flex;
+    flex-direction: row;
+    width: 30vw;
+    height: 6vh;
+}
+
+.menubutton {
+    height: 6vh;
+    width: 6vw;
+}
+
+.title {
+    width: 40vw;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.daily {
+    width: 30vw;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+}
+
+.weather {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 6vw;
+}
+
+.clock {
+    margin-left: auto;
+    width: 12vw;
+    height: auto;
+    text-shadow: 0px 3px 2px #18437B;
+}
+
+/** ypage */
+.ypage {
+    width: 100vw;
+    height: 94vh;
+    display: flex;
+    flex-direction: column;
+    /* background-color: yellow; */
+}
+
+.line1 {
+    display: flex;
+    flex-direction: row;
+    height: 62vh;
+}
+
+.box1 {
+    width: 30vw;
+}
+
+.box2 {
+    width: 40vw;
+}
+
+.box3 {
+    width: 30vw;
+}
+
+.line2 {
+    display: flex;
+    flex-direction: row;
+    height: 32vh
+}
+
+.box4 {
+    width: 30vw;
+}
+
+.box5 {
+    width: 20vw;
+}
+
+.box6 {
+    width: 20vw;
+}
+
+.box7 {
+    width: 30vw;
+}
+
+/** gpage */
+.gpage {
+    width: 100vw;
+    height: 94vh;
+    /* background-color: green; */
+}

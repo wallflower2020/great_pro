@@ -1,20 +1,30 @@
 .clockclass {
-    width: '400px';
-    height: '100px';
-    background-image: linear-gradient(#005fb2,#58a2d9);
-    border-radius: 16px;
+    /* background-image: linear-gradient(#005fb2,#58a2d9); */
+    /* background-image: url('../../assets/image/clock.png'); */
+    /* border-radius: 16px;
+    transform: scale(0.6);
+    width: 20vw;
+    background-repeat: no-repeat;
+    padding-top: 1vh; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-left: auto;
 }
 
 .hourclass {
-    line-height: 130px;
-    font-size: 55px;
+    /* line-height: 264%; */
+    font-size: 1.2em;
     color: white;
     font: Arial,sans-serif;
-    margin-left: 40px;
+    /* margin-left: 10vw; */
 }
 
 .secondsclass {
-    font-size: 30px;
+    font-size: 2em;
     color: white;
     margin-left: 6px;
     font: Arial,sans-serif;
@@ -22,11 +32,13 @@
 
 .dateclass {
     color: white;
-    float: right;
-    margin: 20px 70px 20px 20px;
+    text-align: right;
+    margin-left: auto;
+
+    /* margin: 20px 70px 20px 20px; */
 }
 
-.lunbo {
-    font-size: 55px;
+/* .lunbo {
+    font-size: 3em;
     color: white;
-}
+} */

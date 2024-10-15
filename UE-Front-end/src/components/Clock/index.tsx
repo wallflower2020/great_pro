@@ -4,7 +4,7 @@ import './Clock.css'
 export const Clock = () => {
   const timmer: any = useRef()
   const [Hour, setHour] = useState(0);
-  const [Seconds, setSeconds] = useState('');
+  // const [Seconds, setSeconds] = useState('');
   const [Minutes, setMinutes] = useState('');
   const [Year, setYear] = useState(0);
   const [Month, setMonth] = useState(0);
@@ -29,11 +29,11 @@ export const Clock = () => {
     const wday: number = time.getDay()
     const hour: number = time.getHours();
     const minutes: any = time.getMinutes();
-    const s = time.getSeconds();
-    const seconds: any = s <= 9 ? "0" + s : s;
+    // const s = time.getSeconds();
+    // const seconds: any = s <= 9 ? "0" + s : s;
     // const t = `${year}年${month}月${day}日 ${hour}:${minutes}:${seconds}`
     setHour(hour)
-    setSeconds(seconds)
+    // setSeconds(seconds)
     if (minutes < 10) {
       setMinutes(`0${minutes}`)
     } else {
@@ -59,16 +59,18 @@ export const Clock = () => {
         {Hour && <span style={{ margin: '0 2px' }}>{':'}</span>}
         <span>{Minutes}</span>
       </span>
-      <span className='secondsclass'>
+      {/* <span className='secondsclass'>
         {Seconds}
-      </span>
+      </span> */}
       <div className='dateclass'>
-        {Weekday && <p style={{ fontSize: 20, marginBottom: 5, fontWeight: 'bold' }}>
+        {/* {Weekday && <p style={{ fontSize: 20, marginBottom: 5, fontWeight: 'bold' }}>
           {`星期${Weekday}`}
         </p>}
         {Month && <p style={{ fontSize: 15, fontWeight: 'bold' }}>
           {`${Year}年${Month}月${Day}日`}
-        </p>}
+        </p>} */}
+        <div>{`${Year}年${Month}月${Day}日`}</div>
+        <div>{`星期${Weekday}`}</div>
       </div>
     </div>
   )

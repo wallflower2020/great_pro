@@ -15,7 +15,7 @@ import setting from '../../assets/funcIcon/setting.png'
 import emma from '../../assets/testImg/userhead.jpg'
 import { TransButton } from "../Translate/TransButton";
 import { Weather } from "../Weather";
-import { Timeline } from "../Timeline";
+// import { Timeline } from "../Timeline";
 import { callUe4ByTitle } from '../../util/ue'
 import { Popconfirm, Radio } from 'antd';
 
@@ -196,7 +196,7 @@ const Head: React.FC = () => {
                         <div className={style.userright} >
                             <div className={style.setLine1}>
                                 时间设置：
-                                <Timeline />
+                                {/* <Timeline /> */}
                             </div>
                             <div className={style.setLine2}>
                                 背景音乐：
