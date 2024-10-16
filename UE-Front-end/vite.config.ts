@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import Pages from "vite-plugin-pages";
-import path from 'path';
+// import path from 'path';
 // import visualizer from 'rollup-plugin-visualizer';
 
 import { resolve } from 'path';
@@ -9,6 +9,7 @@ import { resolve } from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+    base: '/great_pro/',
     server: {
         open: true,
         // host: '10.168.1.104',
@@ -17,8 +18,10 @@ export default defineConfig({
         include: ['moment', 'echarts']
     },
     build: {
-        // sourcemap: true,
+        sourcemap: true,
         outDir: 'docs',
+        
+        
         // rollupOptions: {
         //     input: path.resolve(__dirname, "../docs/index.html"),
         // },

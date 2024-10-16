@@ -1,1 +1,2 @@
 const e={graphic:{elements:[{type:"text",left:"center",top:"center",style:{text:"Unreal",fontSize:80,fontWeight:"bold",lineDash:[0,200],lineDashOffset:0,fill:"transparent",stroke:"#000",lineWidth:1},keyframeAnimation:{duration:3e3,loop:!1,keyframes:[{percent:.7,style:{fill:"transparent",lineDashOffset:200,lineDash:[200,0]}},{percent:.8,style:{fill:"transparent"}},{percent:1,style:{fill:"black"}}]}}]}};export{e as option1};
+//# sourceMappingURL=Chartone-9c20ed3a.js.map
