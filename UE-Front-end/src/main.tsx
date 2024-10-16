@@ -18,7 +18,7 @@ const App = () => {
 }
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <BrowserRouter>
+  <BrowserRouter basename='/great_pro'>
     <Home />
     <App />
   </BrowserRouter>
