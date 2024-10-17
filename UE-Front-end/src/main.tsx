@@ -18,7 +18,7 @@ const App = () => {
 }
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <HashRouter basename='/great_pro'>
+  <HashRouter>
     <Home />
     <App />
   </HashRouter>
