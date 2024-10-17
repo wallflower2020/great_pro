@@ -1,7 +1,7 @@
 import { Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
 import routes from 'virtual:generated-pages-react';
-import { BrowserRouter, useRoutes } from "react-router-dom";
+import { HashRouter, useRoutes } from "react-router-dom";
 // import App from './App.tsx'
 import './index.css'
 import { init } from './util/ue'
@@ -18,8 +18,8 @@ const App = () => {
 }
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <BrowserRouter basename='/great_pro'>
+  <HashRouter basename='/great_pro'>
     <Home />
     <App />
-  </BrowserRouter>
+  </HashRouter>
 )
