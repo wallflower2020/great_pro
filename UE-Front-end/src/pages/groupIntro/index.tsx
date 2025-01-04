@@ -75,6 +75,10 @@ const GroupIntro: React.FC = () => {
                     <img alt="close" src={close} style={{ width: '1.1vw' }} />
                 </div>
             </Popconfirm>
+            <ul>
+                <li className="class"></li>
+            </ul>
+            <ul>.body</ul>    
         </div>
     )
 }

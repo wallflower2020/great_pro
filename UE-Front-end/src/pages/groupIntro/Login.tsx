@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Button, Form, Input } from 'antd';
 import { useNavigate } from 'react-router'
 import style from './style.module.css'
+import PrintTest from '../../components/PrintTest';
 
 const Login: React.FC = () => {
     const [register, setRegister] = useState(false)
@@ -114,6 +115,9 @@ const Login: React.FC = () => {
                         </Button>
                         <Button type="default" onClick={() => showRigister()}>
                             注册
+                        </Button>
+                        <Button type="default">
+                            <PrintTest />
                         </Button>
                     </div>
                 </Form.Item>

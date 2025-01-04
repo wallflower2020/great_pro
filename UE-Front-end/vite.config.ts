@@ -12,7 +12,7 @@ export default defineConfig({
     base: '/great_pro/',
     server: {
         open: true,
-        // host: '10.168.1.104',
+        host: '10.145.72.168',
     },
     optimizeDeps: {
         include: ['moment', 'echarts']
